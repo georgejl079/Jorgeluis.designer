@@ -242,9 +242,9 @@ footer h4{margin-bottom:6px;color:#fff}
       <h2 class="title">Resultados y posicionamiento</h2>
       <p class="muted">Construyo activos visuales y comerciales que elevan la credibilidad de la marca y facilitan el proceso de venta.</p>
       <div class="stats">
-        <div class="stat"><h3>100+</h3><p>Proyectos Culminados</p></div>
-        <div class="stat"><h3>15+</h3><p>Clientes</p></div>
-        <div class="stat"><h3>5+</h3><p>Años de experiencia</p></div>
+        <div class="stat"><h3>+100</h3><p>Proyectos Culminados</p></div>
+        <div class="stat"><h3>+15</h3><p>Clientes</p></div>
+        <div class="stat"><h3>+5</h3><p>Años de experiencia</p></div>
         <div class="stat"><h3>95%</h3><p>Clientes recurrentes</p></div>
       </div>
     </article>
@@ -301,7 +301,7 @@ footer h4{margin-bottom:6px;color:#fff}
     <p>Servicios diseñados para empresas que necesitan consistencia visual, soporte técnico y herramientas de venta efectivas.</p>
   </div>
   <div class="services-grid">
-    <article class="service-box"><span <img src="catalogoisesur.png"> class="tag">Catálogos</span><h3>Catálogos Técnicos</h3><p>Diseño editorial profesional para líneas de productos, fichas técnicas y documentación comercial industrial.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
+    <article class="service-box"><span class="tag">Catálogos</span><h3>Catálogos Técnicos</h3><p>Diseño editorial profesional para líneas de productos, fichas técnicas y documentación comercial industrial.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
     <article class="service-box"><span class="tag">Traducción</span><h3>Traducción de Catálogos</h3><p>Traducción y localización de catálogos para mercados hispanos e internacionales con terminología técnica correcta.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
     <article class="service-box"><span class="tag">Branding</span><h3>Branding Corporativo</h3><p>Identidad visual estratégica: logo, sistema gráfico, guía de marca y piezas clave para posicionamiento empresarial.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
     <article class="service-box"><span class="tag">Audiovisual</span><h3>Edición Audiovisual</h3><p>Producción y montaje de contenido dinámico para redes sociales y publicidad, diseñado para captar la atención y dirigir tráfico a tus canales de venta</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
@@ -314,8 +314,8 @@ footer h4{margin-bottom:6px;color:#fff}
     <p>Cada proyecto presenta contexto, solución implementada y resultado de negocio para evidenciar calidad profesional.</p>
   </div>
   <div class="portfolio-grid">
-    <article class="project" onclick="renderProject('p1')"> <img src="catalogoisesur.png" alt="Foto" style="width:400px; height:400px; display:block; border: 2px solid red;"> </src><span>Industria eléctrica</span><h3>Catálogo Técnico ElectraPro</h3></article>
-    <article class="project" onclick="renderProject('p2')"><span>Distribución B2B</span><h3>Catálogo Web Industrial Norte</h3></article>
+    <article class="project" onclick="renderProject('p1')"> <img src="catalogoisesur.png" alt="Foto" style="width:350px; height:250px; display:block; border: 2px solid red;"><span>Industria eléctrica</span><h3>Catálogo Técnico ISESUR</h3></article>
+    <article class="project" onclick="renderProject('p2')"> <img src="tiendaaura.png" alt="Foto" style="width:350px; height:250px; display:block; border: 2px solid red;"> <span>Tienda Aura</span><h3>Rediseño de E-commerce: Experiencia de Usuario Orientada a Ventas.</h3></article>
     <article class="project" onclick="renderProject('p3')"><span>Retail premium</span><h3>Rebranding Nova Line</h3></article>
   </div>
   <div class="card project-detail" id="project-detail"></div>
@@ -402,7 +402,7 @@ const projectDetail = document.getElementById("project-detail");
 
 const projects = {
   p1: {
-    title: "Catálogo Técnico ElectraPro",
+    title: "Catálogo Técnico Isesur",
     description: "Diseño completo de catálogo técnico para línea eléctrica industrial con enfoque en precisión visual y lectura rápida para departamentos de compras.",
     points: [
       "Estructura modular para 340+ referencias.",
@@ -412,13 +412,12 @@ const projects = {
     ]
   },
   p2: {
-    title: "Catálogo Web Industrial Norte",
-    description: "Transformación de catálogo impreso a catálogo web navegable por categoría, con finalización de solicitud por WhatsApp.",
+    title: "Rediseño de E-commerce: Experiencia de Usuario Orientada a Ventas.",
+    description: "Aura requería una plataforma de ventas que eliminara la fricción en el proceso de compra para el usuario móvil. El objetivo era centralizar la experiencia de compra en una interfaz intuitiva, moderna y con estética de lujo accesible.",
     points: [
-      "Filtro por familia de productos y aplicación.",
-      "Fichas con data técnica y CTA comercial directo.",
-      "Interfaz mobile-first para equipos de ventas en campo.",
-      "Incremento de 41% en leads por WhatsApp."
+      "Navegación Intuitiva: Implementé una barra inferior (Bottom Bar) para facilitar la usabilidad con una sola mano.",
+      "Optimización de Conversión: Integré elementos de confianza claros, como incentivos de envío gratuito y acceso directo a atención al cliente por WhatsApp, para reducir la tasa de abandono.",
+      "Arquitectura de Información: Estructuré el catálogo con secciones claras de Promociones y Categorías para asegurar un recorrido de compra rápido y fluido.",
     ]
   },
   p3: {
