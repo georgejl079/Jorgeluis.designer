@@ -1,513 +1,3553 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Luis | Portafolio Profesional</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#050505;
-  --bg2:#0d0d0d;
-  --card:#101010;
-  --line:rgba(255,255,255,.09);
-  --txt:#fff;
-  --muted:#bcbcbc;
-  --orange:#ff6a00;
-  --orange2:#ff8c00;
-  --radius:22px;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-html{scroll-behavior:smooth}
-body{
-  color:var(--txt);
-  background:
-    radial-gradient(circle at 90% 10%, rgba(255,106,0,.18), transparent 35%),
-    radial-gradient(circle at 0% 100%, rgba(255,140,0,.12), transparent 30%),
-    var(--bg);
-  overflow-x:hidden;
-}
-header{
-  position:fixed;top:0;left:0;right:0;z-index:999;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 6%;
-  background:rgba(5,5,5,.75);
-  border-bottom:1px solid var(--line);
-  backdrop-filter:blur(14px);
-}
-.brand{display:flex;gap:12px;align-items:center;font-weight:800;letter-spacing:.08em}
-.brand-icon{
-  width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
-  background:linear-gradient(130deg,var(--orange),var(--orange2));color:#111;font-weight:900;
-}
-nav{display:flex;gap:25px}
-nav button{
-  border:none;background:none;color:#fff;cursor:pointer;font-weight:500
-}
-nav button.active-link,nav button:hover{color:var(--orange)}
+  <!-- ============================================================
+       META BÁSICOS
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-.page{display:none;min-height:100vh;padding:110px 6% 98px;animation:fade .45s ease}
-.page.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  <!-- ============================================================
+       TÍTULO Y DESCRIPCIÓN
+  ============================================================ -->
+  <title>Jorge Luis | Diseñador Gráfico & Branding</title>
+  <meta name="description" content="Jorge Luis, diseñador gráfico especializado en catálogos técnicos, branding, edición audiovisual, diseño web y catálogos web. Transformo la presencia digital de tu empresa." />
+  <meta name="keywords" content="diseñador gráfico, catálogos técnicos, branding, diseño web, edición audiovisual, catálogos web, traducción de catálogos, portafolio diseño" />
+  <meta name="author" content="Jorge Luis" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jorgeluis-portafolio.com" />
 
-.btn{
-  border:none;border-radius:999px;padding:13px 22px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block
-}
-.btn-main{
-  background:linear-gradient(130deg,var(--orange),var(--orange2));color:#121212
-}
-.btn-main:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(255,106,0,.3)}
-.btn-soft{
-  background:rgba(255,255,255,.02);border:1px solid var(--line);color:#fff
-}
+  <!-- ============================================================
+       THEME COLOR (para navegadores móviles)
+  ============================================================ -->
+  <meta name="theme-color" content="#ff6a00" />
+  <meta name="msapplication-TileColor" content="#ff6a00" />
+  <meta name="msapplication-config" content="none" />
 
-.hero{
-  display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center
-}
-.chip{
-  display:inline-block;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,106,0,.4);
-  text-transform:uppercase;font-size:.75rem;letter-spacing:.08em
-}
-h1{
-  margin:18px 0 14px;line-height:1.03;font-size:clamp(2rem,4.8vw,4.1rem)
-}
-h1 span,.accent{color:var(--orange)}
-.lead{color:var(--muted);line-height:1.75;max-width:640px}
-.hero-actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
-.hero-card{
-  position:relative;border:1px solid var(--line);border-radius:34px;padding:20px;
-  background:linear-gradient(160deg,#111,#090909)
-}
-.hero-card::before{
-  content:"";position:absolute;inset:auto -40px -30px auto;width:220px;height:220px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,106,0,.45),rgba(255,106,0,0) 70%);
-}
-.profile{
-  width:100%;max-width:380px;margin:auto;display:block;border-radius:26px;border:1px solid var(--line);
-  position:relative;z-index:1
-}
+  <!-- ============================================================
+       FAVICON
+  ============================================================ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>" />
 
-.home-grid{margin-top:44px;display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-.card{
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:linear-gradient(170deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
-  padding:22px
-}
-.title{font-size:clamp(1.35rem,2.8vw,2rem);margin-bottom:8px}
-.muted{color:var(--muted);line-height:1.72}
+  <!-- ============================================================
+       OPEN GRAPH (para redes sociales)
+  ============================================================ -->
+  <meta property="og:title" content="Jorge Luis | Diseñador Gráfico & Branding" />
+  <meta property="og:description" content="Diseñador gráfico especializado en catálogos técnicos, branding, edición audiovisual, diseño web y catálogos web. Transformo la presencia digital de tu empresa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jorgeluis-portafolio.com" />
+  <meta property="og:image" content="https://jorgeluis-portafolio.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Jorge Luis | Diseñador Gráfico" />
+  <meta property="og:locale" content="es_ES" />
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
-.stat{
-  background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px
-}
-.stat h3{font-size:1.4rem;color:var(--orange)}
-.stat p{font-size:.86rem;color:var(--muted);margin-top:4px}
+  <!-- ============================================================
+       TWITTER CARDS
+  ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jorge Luis | Diseñador Gráfico & Branding" />
+  <meta name="twitter:description" content="Diseñador gráfico especializado en catálogos técnicos, branding, edición audiovisual, diseño web y catálogos web." />
+  <meta name="twitter:image" content="https://jorgeluis-portafolio.com/og-image.jpg" />
 
-.services-quick{margin-top:16px;display:grid;gap:8px}
-.services-quick li{
-  list-style:none;border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:12px;padding:10px 12px
-}
+  <!-- ============================================================
+       SCHEMA.ORG - DATOS ESTRUCTURADOS
+  ============================================================ -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jorge Luis",
+      "jobTitle": "Diseñador Gráfico",
+      "url": "https://jorgeluis-portafolio.com",
+      "image": "https://jorgeluis-portafolio.com/Jorgeluis.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/tuusuario",
+        "https://www.instagram.com/tuusuario"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Jorge Luis - Diseñador Gráfico"
+      },
+      "knowsAbout": [
+        "Diseño gráfico",
+        "Catálogos técnicos",
+        "Branding",
+        "Diseño web",
+        "Edición audiovisual",
+        "Catálogos web"
+      ]
+    }
+  </script>
 
-.section-head{margin-bottom:20px}
-.section-head h2{font-size:clamp(1.6rem,3vw,2.5rem)}
-.section-head p{color:var(--muted);line-height:1.7;max-width:760px;margin-top:8px}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Jorge Luis - Diseñador Gráfico",
+      "description": "Diseñador gráfico especializado en catálogos técnicos, branding, edición audiovisual, diseño web y catálogos web.",
+      "url": "https://jorgeluis-portafolio.com",
+      "telephone": "+591-75179990",
+      "email": "jorge@portafolio.com",
+      "image": "https://jorgeluis-portafolio.com/Jorgeluis.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Bolivia"
+      }
+    }
+  </script>
 
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.service-box{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:18px}
-.service-box h3{margin:8px 0 10px}
-.service-box p{color:var(--muted);font-size:.95rem;line-height:1.6;min-height:90px}
-.tag{
-  display:inline-block;border-radius:999px;padding:5px 10px;font-size:.72rem;
-  border:1px solid rgba(255,106,0,.45);color:#ffc29b
-}
+  <!-- ============================================================
+       GOOGLE ANALYTICS
+  ============================================================ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.project{
-  min-height:250px;border-radius:16px;padding:16px;cursor:pointer;
-  border:1px solid var(--line);
-  display:flex;flex-direction:column;justify-content:flex-end;gap:7px;
-  background:
-    linear-gradient(180deg,transparent 35%,rgba(0,0,0,.78)),
-    linear-gradient(145deg,#161616,#0b0b0b)
-}
-.project:hover{border-color:rgba(255,106,0,.52);transform:translateY(-2px)}
-.project span{color:#ffbd92;font-size:.82rem}
-.project-detail{margin-top:16px}
-.project-detail ul{margin-top:10px;display:grid;gap:7px}
-.project-detail li{list-style:none;color:#d4d4d4}
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
-.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.bio-list{margin-top:10px;display:grid;gap:8px}
-.bio-list li{list-style:none;color:#d2d2d2}
+  <!-- ============================================================
+       ROBOTS (permitir indexación)
+  ============================================================ -->
+  <meta name="robots" content="index, follow" />
 
-.skills-grid{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.skill{
-  border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg2);cursor:pointer
-}
-.skill strong{color:#fff}
-.skill p{color:var(--muted);font-size:.84rem;margin-top:5px}
-.skill:hover{border-color:rgba(255,106,0,.6)}
+  <!-- ============================================================
+       PRELOAD DE FUENTES (mejora velocidad)
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-.skill-meter{margin-top:14px}
-.bar{height:12px;background:#1b1b1b;border-radius:999px;overflow:hidden}
-.bar-fill{
-  width:0;height:100%;background:linear-gradient(130deg,var(--orange),var(--orange2));transition:width .35s ease
-}
-.skill-note{color:#ddd;margin-top:8px;font-size:.92rem}
+  <!-- ============================================================
+       SITEMAP (generado dinámicamente)
+  ============================================================ -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-.contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:16px}
-.bullet-list{margin-top:12px;display:grid;gap:8px}
-.bullet-list li{list-style:none;color:#d5d5d5}
-form{display:grid;gap:10px}
-input,select,textarea{
-  width:100%;background:var(--bg2);border:1px solid var(--line);color:#fff;border-radius:12px;padding:12px
-}
-textarea{min-height:120px;resize:vertical}
-.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.checks label{
-  border:1px solid var(--line);border-radius:10px;background:var(--bg2);
-  padding:9px;font-size:.9rem;display:flex;gap:8px;align-items:center
-}
-.checks input{width:auto}
-.actions{display:flex;flex-wrap:wrap;gap:10px}
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050505;
+      color: #fff;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 90% 10%, rgba(255, 106, 0, 0.10), transparent 40%),
+        radial-gradient(circle at 0% 100%, rgba(255, 140, 0, 0.06), transparent 35%);
+      background-attachment: fixed;
+    }
+    ::selection {
+      background: #ff6a00;
+      color: #000;
+    }
 
-footer{
-  padding:44px 6% 108px;border-top:1px solid var(--line);color:#cbcbcb
-}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
-footer h4{margin-bottom:6px;color:#fff}
+    /* ============================================================
+       VARIABLES
+    ============================================================ */
+    :root {
+      --orange: #ff6a00;
+      --orange2: #ff8c00;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --border-line: rgba(255, 255, 255, 0.07);
+      --radius: 20px;
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
 
-.wa-float{
-  position:fixed;right:16px;bottom:82px;z-index:1000;
-  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;text-decoration:none;
-  font-weight:900;color:#111;background:linear-gradient(130deg,var(--orange),var(--orange2));box-shadow:0 12px 26px rgba(255,106,0,.4)
-}
+    /* ============================================================
+       SCROLLBAR
+    ============================================================ */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--orange);
+      border-radius: 10px;
+    }
 
-.mobile-nav{display:none}
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 6%;
+      background: rgba(5, 5, 5, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-line);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      font-size: 1.1rem;
+    }
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #111;
+      font-weight: 900;
+      font-size: 0.85rem;
+    }
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    nav button {
+      border: none;
+      background: none;
+      color: #ccc;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 6px 0;
+      position: relative;
+      transition: color var(--transition);
+    }
+    nav button::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width var(--transition);
+    }
+    nav button:hover,
+    nav button.active {
+      color: #fff;
+    }
+    nav button.active::after {
+      width: 100%;
+    }
 
-@media (max-width:1150px){
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .stats,.skills-grid{grid-template-columns:repeat(2,1fr)}
-  .hero,.home-grid,.about-layout,.contact-grid,.footer-grid{grid-template-columns:1fr}
-}
-@media (max-width:820px){
-  nav{display:none}
-  header{padding:13px 5%}
-  .page{padding:92px 5% 100px}
-  .services-grid,.portfolio-grid,.stats,.skills-grid,.checks{grid-template-columns:1fr}
-  .mobile-nav{
-    display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:999;
-    background:rgba(8,8,8,.97);border-top:1px solid var(--line);padding:8px max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))
-  }
-  .mobile-nav button{
-    border:none;background:none;color:#fff;cursor:pointer;font-size:.7rem;padding:8px 2px
-  }
-  .mobile-nav button.active-mobile{color:var(--orange)}
-}
-</style>
+    /* ============================================================
+       MAIN
+    ============================================================ */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 6% 80px;
+      min-height: 70vh;
+    }
+
+    /* ============================================================
+       PAGES
+    ============================================================ */
+    .page {
+      display: none;
+      animation: fadeUp 0.4s ease forwards;
+    }
+    .page.active {
+      display: block;
+    }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+    h1 span {
+      color: var(--orange);
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .lead {
+      color: #bcbcbc;
+      line-height: 1.75;
+      max-width: 640px;
+      font-size: 1.05rem;
+    }
+    .muted {
+      color: #bcbcbc;
+      line-height: 1.7;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--orange);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 14px 32px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all var(--transition);
+      font-size: 0.95rem;
+    }
+    .btn-main {
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #111;
+    }
+    .btn-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(255, 106, 0, 0.35);
+    }
+    .btn-soft {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-line);
+      color: #fff;
+    }
+    .btn-soft:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 106, 0, 0.4);
+    }
+    .btn-back {
+      background: transparent;
+      border: none;
+      color: #bcbcbc;
+      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 8px 0;
+      transition: color var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .btn-back:hover {
+      color: #fff;
+    }
+
+    /* ============================================================
+       CHIP
+    ============================================================ */
+    .chip {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 106, 0, 0.35);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #ffc29b;
+    }
+
+    /* ============================================================
+       CARDS
+    ============================================================ */
+    .card {
+      border: 1px solid var(--border-line);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      backdrop-filter: blur(4px);
+      padding: 28px;
+      transition: border-color var(--transition);
+    }
+    .card:hover {
+      border-color: rgba(255, 106, 0, 0.15);
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .hero-title-wrapper {
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .hero-title .name {
+      color: #fff;
+      display: inline-block;
+    }
+    .hero-title .role {
+      color: var(--orange);
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+
+    .hero-rotating {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+      font-weight: 600;
+      color: #bcbcbc;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+    .hero-rotating .prefix {
+      color: #bcbcbc;
+      font-weight: 400;
+    }
+    .hero-rotating .rotating-wrapper {
+      display: inline-block;
+      min-width: 200px;
+      height: 1.8em;
+      position: relative;
+      vertical-align: bottom;
+    }
+    .hero-rotating .rotating-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      color: var(--orange);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .hero-rotating .rotating-text.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-rotating .rotating-text.exit {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+
+    .hero-card {
+      position: relative;
+      border: 1px solid var(--border-line);
+      border-radius: 34px;
+      padding: 20px;
+      background: linear-gradient(160deg, #111, #080808);
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: auto -60px -40px auto;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 106, 0, 0.30), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-card .profile {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      display: block;
+      border-radius: 20px;
+      border: 1px solid var(--border-line);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .lead {
+      max-width: 560px;
+      margin-top: 4px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ============================================================
+       FEATURED PROJECTS (HOME)
+    ============================================================ */
+    .featured-section {
+      margin: 60px 0 50px;
+      padding-top: 10px;
+    }
+    .featured-section .section-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .featured-section .section-head p {
+      margin: 8px auto 0;
+      max-width: 620px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .featured-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-line);
+      cursor: pointer;
+      transition: all var(--transition);
+      position: relative;
+      aspect-ratio: 16/10;
+      background: linear-gradient(145deg, #161616, #0a0a0a);
+      min-height: 260px;
+      width: 100%;
+    }
+    .featured-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .featured-item:hover img {
+      transform: scale(1.06);
+    }
+    .featured-item:hover {
+      border-color: rgba(255, 106, 0, 0.5);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .featured-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.88));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      transition: opacity var(--transition);
+      pointer-events: none;
+    }
+    .featured-item .overlay span {
+      font-size: 0.7rem;
+      color: #ffbd92;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+    .featured-item .overlay h4 {
+      font-size: 1.2rem;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .featured-cta {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    /* ============================================================
+       HOME GRID
+    ============================================================ */
+    .home-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      margin-top: 10px;
+    }
+    .results-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .results-card .muted {
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .stat-item {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-line);
+      border-radius: 14px;
+      padding: 18px 12px;
+      text-align: center;
+      transition: border-color var(--transition);
+    }
+    .stat-item:hover {
+      border-color: rgba(255, 106, 0, 0.3);
+    }
+    .stat-item h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1.2;
+    }
+    .stat-item p {
+      font-size: 0.78rem;
+      color: #aaa;
+      margin-top: 4px;
+    }
+    .specialties-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .specialties-card .muted {
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+    .specialties-list {
+      display: grid;
+      gap: 10px;
+    }
+    .specialties-list li {
+      list-style: none;
+      border: 1px solid var(--border-line);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all var(--transition);
+    }
+    .specialties-list li:hover {
+      border-color: rgba(255, 106, 0, 0.3);
+      background: rgba(255, 106, 0, 0.04);
+    }
+    .specialties-list .icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       ABOUT PAGE
+    ============================================================ */
+    .about-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .bio-section {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+    .bio-avatar {
+      width: 100%;
+      max-width: 340px;
+      border-radius: var(--radius);
+      border: 2px solid var(--border-line);
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      background: linear-gradient(145deg, #161616, #0a0a0a);
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+    .bio-avatar:hover {
+      border-color: rgba(255, 106, 0, 0.4);
+      transform: scale(1.01);
+    }
+    .bio-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .bio-content h2 {
+      font-size: 2.4rem;
+      margin-bottom: 2px;
+    }
+    .bio-content .bio-subtitle {
+      color: var(--orange);
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .bio-content .bio-text {
+      color: #d4d4d4;
+      line-height: 1.9;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+    .bio-grid-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      margin-top: 4px;
+    }
+    .bio-grid-features li {
+      list-style: none;
+      color: #d4d4d4;
+      padding-left: 24px;
+      position: relative;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .bio-grid-features li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-size: 0.6rem;
+      top: 2px;
+    }
+    .bio-achievements {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-line);
+    }
+    .bio-achievement {
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border-line);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all var(--transition);
+      text-align: center;
+    }
+    .bio-achievement:hover {
+      border-color: rgba(255, 106, 0, 0.35);
+      background: rgba(255, 106, 0, 0.05);
+      transform: translateY(-2px);
+    }
+    .bio-achievement .ach-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1.2;
+    }
+    .bio-achievement .ach-label {
+      font-size: 0.85rem;
+      color: #bcbcbc;
+      margin-top: 2px;
+    }
+    .bio-achievement .ach-desc {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 4px;
+    }
+    .skills-grid-about {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .skill-about {
+      border: 1px solid var(--border-line);
+      border-radius: 14px;
+      padding: 20px 22px;
+      background: rgba(0, 0, 0, 0.3);
+      transition: all var(--transition);
+      cursor: default;
+    }
+    .skill-about:hover {
+      border-color: rgba(255, 106, 0, 0.5);
+      background: rgba(255, 106, 0, 0.05);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    .skill-about .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .skill-about .skill-header strong {
+      color: #fff;
+      font-size: 1rem;
+    }
+    .skill-about .skill-header .skill-pct {
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 1rem;
+      font-variant-numeric: tabular-nums;
+      min-width: 44px;
+      text-align: right;
+    }
+    .skill-about .skill-bar {
+      height: 6px;
+      background: #1a1a1a;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+    .skill-about .skill-bar .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      border-radius: 999px;
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .skill-about p {
+      color: #aaa;
+      font-size: 0.82rem;
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       PORTFOLIO PAGE
+    ============================================================ */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .portfolio-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-line);
+      background: var(--bg-card);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 106, 0, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .portfolio-card .card-image {
+      width: 100%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #161616, #0a0a0a);
+    }
+    .portfolio-card .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      display: block;
+    }
+    .portfolio-card:hover .card-image img {
+      transform: scale(1.06);
+    }
+
+    .portfolio-card .card-image .card-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #ffc29b;
+      border: 1px solid rgba(255, 106, 0, 0.3);
+      font-weight: 600;
+      pointer-events: none;
+    }
+
+    .portfolio-card .card-body {
+      padding: 22px 24px 24px;
+    }
+    .portfolio-card .card-body h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      transition: color var(--transition);
+    }
+    .portfolio-card:hover .card-body h3 {
+      color: var(--orange);
+    }
+    .portfolio-card .card-body .card-category {
+      font-size: 0.8rem;
+      color: #ffbd92;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .portfolio-card .card-body p {
+      color: #bcbcbc;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .portfolio-card .card-body .btn-ver {
+      font-size: 0.8rem;
+      color: var(--orange);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .portfolio-card .card-body .btn-ver:hover {
+      gap: 12px;
+      color: #fff;
+    }
+
+    /* ============================================================
+       PROJECT DETAIL
+    ============================================================ */
+    #project-detail {
+      display: none;
+    }
+    #project-detail.visible {
+      display: block;
+    }
+
+    .project-detail-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-top: 10px;
+    }
+
+    .gallery-container {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-line);
+      background: #0a0a0a;
+    }
+    .gallery-slide {
+      display: none;
+      width: 100%;
+      aspect-ratio: 16/10;
+    }
+    .gallery-slide.active {
+      display: block;
+    }
+    .gallery-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all var(--transition);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-btn:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #111;
+    }
+    .gallery-btn.prev {
+      left: 12px;
+    }
+    .gallery-btn.next {
+      right: 12px;
+    }
+
+    .gallery-counter {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: #ccc;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 10;
+    }
+
+    .gallery-thumbs {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+    .gallery-thumbs::-webkit-scrollbar {
+      height: 4px;
+    }
+    .gallery-thumbs::-webkit-scrollbar-thumb {
+      background: var(--orange);
+      border-radius: 10px;
+    }
+    .gallery-thumb {
+      flex: 0 0 80px;
+      aspect-ratio: 16/10;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition);
+      opacity: 0.6;
+    }
+    .gallery-thumb:hover {
+      opacity: 0.9;
+    }
+    .gallery-thumb.active {
+      border-color: var(--orange);
+      opacity: 1;
+    }
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .detail-info .detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+    .detail-info .detail-meta span {
+      background: rgba(255, 106, 0, 0.12);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: #ffc29b;
+      border: 1px solid rgba(255, 106, 0, 0.25);
+    }
+    .detail-info .detail-desc {
+      color: #d4d4d4;
+      line-height: 1.8;
+      font-size: 1.02rem;
+      margin-bottom: 20px;
+    }
+    .detail-info h3 {
+      margin-top: 16px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    .detail-info ul {
+      display: grid;
+      gap: 10px;
+    }
+    .detail-info li {
+      list-style: none;
+      color: #d4d4d4;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .detail-info li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 10px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border-line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-card);
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 106, 0, 0.4);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .service-card .service-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #161616, #0a0a0a);
+      flex-shrink: 0;
+    }
+    .service-card .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      display: block;
+    }
+    .service-card:hover .service-image img {
+      transform: scale(1.06);
+    }
+    .service-card .service-image .service-icon {
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+      font-size: 3.5rem;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .service-card .service-body {
+      padding: 24px 24px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card .service-body .service-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--orange);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .service-card .service-body h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      transition: color var(--transition);
+    }
+    .service-card:hover .service-body h3 {
+      color: var(--orange);
+    }
+    .service-card .service-body p {
+      color: #bcbcbc;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .service-card .service-body .service-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--orange);
+      transition: all var(--transition);
+      align-self: flex-start;
+    }
+    .service-card:hover .service-body .service-btn {
+      gap: 14px;
+    }
+
+    #service-detail {
+      display: none;
+    }
+    #service-detail.visible {
+      display: block;
+    }
+
+    .service-detail-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-detail-header {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    .service-detail-header .service-category {
+      display: inline-block;
+      background: rgba(255, 106, 0, 0.12);
+      border: 1px solid rgba(255, 106, 0, 0.25);
+      padding: 4px 16px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #ffc29b;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .service-detail-header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+    .service-detail-header .service-subtitle {
+      font-size: 1.1rem;
+      color: #bcbcbc;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .service-detail-image {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-line);
+      margin: 20px 0 32px;
+    }
+
+    .service-article {
+      color: #d4d4d4;
+    }
+    .service-article .intro {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #e8e8e8;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-line);
+    }
+    .service-article .intro strong {
+      color: #fff;
+    }
+    .service-article h2 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin: 32px 0 16px;
+      font-weight: 700;
+    }
+    .service-article h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 24px 0 12px;
+      font-weight: 600;
+    }
+    .service-article p {
+      line-height: 1.9;
+      margin-bottom: 18px;
+      font-size: 1.02rem;
+    }
+    .service-article p strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, rgba(255, 106, 0, 0.25) 0%, rgba(255, 106, 0, 0.10) 100%);
+      padding: 0 6px;
+      border-radius: 4px;
+      color: #ffc29b;
+      font-weight: 500;
+    }
+    .highlight-orange {
+      background: rgba(255, 106, 0, 0.15);
+      border-left: 3px solid var(--orange);
+      padding: 2px 12px;
+      border-radius: 0 4px 4px 0;
+      color: #ffbd92;
+    }
+
+    .service-quote {
+      border-left: 4px solid var(--orange);
+      padding: 20px 28px;
+      margin: 24px 0;
+      background: rgba(255, 106, 0, 0.05);
+      border-radius: 0 12px 12px 0;
+      position: relative;
+    }
+    .service-quote::before {
+      content: '"';
+      font-size: 3rem;
+      color: var(--orange);
+      opacity: 0.3;
+      position: absolute;
+      top: -4px;
+      left: 12px;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .service-quote p {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #e8e8e8;
+      margin-bottom: 4px;
+      padding-left: 20px;
+    }
+    .service-quote .quote-author {
+      font-size: 0.85rem;
+      color: #888;
+      font-style: normal;
+      padding-left: 20px;
+    }
+    .service-quote .quote-author::before {
+      content: '— ';
+    }
+
+    .service-article ul {
+      display: grid;
+      gap: 12px;
+      margin: 16px 0 24px;
+      padding-left: 8px;
+    }
+    .service-article ul li {
+      list-style: none;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.7;
+      color: #d4d4d4;
+    }
+    .service-article ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-size: 0.7rem;
+      top: 2px;
+    }
+    .service-article ul li strong {
+      color: #fff;
+    }
+
+    .service-box {
+      background: rgba(255, 106, 0, 0.06);
+      border: 1px solid rgba(255, 106, 0, 0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .service-box h4 {
+      color: var(--orange);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .service-box p {
+      margin-bottom: 0;
+      color: #d4d4d4;
+    }
+
+    .service-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), transparent);
+      margin: 32px 0;
+      border-radius: 999px;
+    }
+
+    .service-conclusion {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-line);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0 24px;
+    }
+    .service-conclusion h3 {
+      color: var(--orange);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .service-conclusion p {
+      margin-bottom: 0;
+    }
+
+    .service-related {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-line);
+    }
+    .service-related h3 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .service-related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .service-related-item {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-line);
+      cursor: pointer;
+      transition: all var(--transition);
+      position: relative;
+      aspect-ratio: 16/10;
+      background: linear-gradient(145deg, #161616, #0a0a0a);
+    }
+    .service-related-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .service-related-item:hover img {
+      transform: scale(1.06);
+    }
+    .service-related-item:hover {
+      border-color: rgba(255, 106, 0, 0.4);
+      transform: translateY(-4px);
+    }
+    .service-related-item .related-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+    }
+    .service-related-item .related-overlay span {
+      font-size: 0.65rem;
+      color: #ffbd92;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+    .service-related-item .related-overlay h4 {
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+
+    /* ============================================================
+       BLOG - CATEGORÍAS PROFESIONALES Y DINÁMICAS
+    ============================================================ */
+    .blog-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+      padding: 4px 6px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 999px;
+      border: 1px solid var(--border-line);
+      justify-content: center;
+    }
+
+    .blog-filters button {
+      background: transparent;
+      border: none;
+      color: #888;
+      padding: 8px 22px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: all var(--transition);
+      font-family: inherit;
+      border-radius: 999px;
+      position: relative;
+    }
+    .blog-filters button:hover {
+      color: #ccc;
+    }
+    .blog-filters button.active-filter {
+      color: #fff;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      box-shadow: 0 4px 16px rgba(255, 106, 0, 0.35);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .blog-post {
+      border: 1px solid var(--border-line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-card);
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-post:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 106, 0, 0.4);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .blog-post .blog-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #161616, #0a0a0a);
+      flex-shrink: 0;
+    }
+    .blog-post .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      display: block;
+    }
+    .blog-post:hover .blog-image img {
+      transform: scale(1.08);
+    }
+
+    .blog-post .blog-image .blog-category-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      padding: 5px 16px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #ffc29b;
+      border: 1px solid rgba(255, 106, 0, 0.3);
+      font-weight: 600;
+      pointer-events: none;
+    }
+
+    .blog-post-content {
+      padding: 22px 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-post-content .blog-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.75rem;
+      color: #888;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .blog-post-content .blog-meta span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .blog-post-content h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      line-height: 1.35;
+      transition: color var(--transition);
+      font-weight: 700;
+    }
+    .blog-post:hover .blog-post-content h3 {
+      color: var(--orange);
+    }
+    .blog-post-content .blog-excerpt {
+      color: #bcbcbc;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .blog-post-content .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--orange);
+      transition: all var(--transition);
+      align-self: flex-start;
+    }
+    .blog-post:hover .blog-post-content .blog-read-more {
+      gap: 14px;
+    }
+
+    #blog-detail {
+      display: none;
+    }
+    #blog-detail.visible {
+      display: block;
+    }
+
+    .blog-detail-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .blog-detail-header {
+      margin-bottom: 28px;
+    }
+    .blog-detail-header .blog-category {
+      display: inline-block;
+      background: rgba(255, 106, 0, 0.12);
+      border: 1px solid rgba(255, 106, 0, 0.25);
+      padding: 4px 16px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #ffc29b;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .blog-detail-header h1 {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .blog-detail-header .blog-meta {
+      display: flex;
+      gap: 20px;
+      font-size: 0.85rem;
+      color: #888;
+      flex-wrap: wrap;
+    }
+    .blog-detail-header .blog-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blog-detail-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-line);
+      margin: 20px 0 30px;
+    }
+
+    .blog-article {
+      color: #d4d4d4;
+    }
+    .blog-article .intro {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #e8e8e8;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-line);
+    }
+    .blog-article .intro strong {
+      color: #fff;
+    }
+    .blog-article h2 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin: 32px 0 16px;
+      font-weight: 700;
+    }
+    .blog-article h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 24px 0 12px;
+      font-weight: 600;
+    }
+    .blog-article p {
+      line-height: 1.9;
+      margin-bottom: 18px;
+      font-size: 1.02rem;
+    }
+    .blog-article p strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .blog-quote {
+      border-left: 4px solid var(--orange);
+      padding: 20px 28px;
+      margin: 24px 0;
+      background: rgba(255, 106, 0, 0.05);
+      border-radius: 0 12px 12px 0;
+      position: relative;
+    }
+    .blog-quote::before {
+      content: '"';
+      font-size: 3rem;
+      color: var(--orange);
+      opacity: 0.3;
+      position: absolute;
+      top: -4px;
+      left: 12px;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .blog-quote p {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #e8e8e8;
+      margin-bottom: 4px;
+      padding-left: 20px;
+    }
+    .blog-quote .quote-author {
+      font-size: 0.85rem;
+      color: #888;
+      font-style: normal;
+      padding-left: 20px;
+    }
+    .blog-quote .quote-author::before {
+      content: '— ';
+    }
+
+    .blog-article ul {
+      display: grid;
+      gap: 12px;
+      margin: 16px 0 24px;
+      padding-left: 8px;
+    }
+    .blog-article ul li {
+      list-style: none;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.7;
+      color: #d4d4d4;
+    }
+    .blog-article ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-size: 0.7rem;
+      top: 2px;
+    }
+    .blog-article ul li strong {
+      color: #fff;
+    }
+
+    .blog-box {
+      background: rgba(255, 106, 0, 0.06);
+      border: 1px solid rgba(255, 106, 0, 0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .blog-box h4 {
+      color: var(--orange);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .blog-box p {
+      margin-bottom: 0;
+      color: #d4d4d4;
+    }
+
+    .blog-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), transparent);
+      margin: 32px 0;
+      border-radius: 999px;
+    }
+
+    .blog-conclusion {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-line);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0 24px;
+    }
+    .blog-conclusion h3 {
+      color: var(--orange);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .blog-conclusion p {
+      margin-bottom: 0;
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+    }
+    .bullet-list {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+    .bullet-list li {
+      list-style: none;
+      color: #d5d5d5;
+      padding-left: 24px;
+      position: relative;
+    }
+    .bullet-list li::before {
+      content: '◈';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+    }
+    form {
+      display: grid;
+      gap: 12px;
+    }
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border-line);
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.95rem;
+      transition: border-color var(--transition);
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .checks label {
+      border: 1px solid var(--border-line);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 10px 12px;
+      font-size: 0.85rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .checks label:hover {
+      border-color: rgba(255, 106, 0, 0.3);
+    }
+    .checks input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      padding: 48px 6% 40px;
+      border-top: 1px solid var(--border-line);
+      background: #050505;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
+      opacity: 0.4;
+    }
+
+    .footer-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.8fr 1.2fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .footer-brand .brand-icon-small {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: inline-grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #111;
+      font-weight: 900;
+      font-size: 0.8rem;
+      margin-right: 10px;
+    }
+    .footer-brand h4 {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+    .footer-brand p {
+      color: #bcbcbc;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      max-width: 420px;
+    }
+
+    .footer-channels h4 {
+      color: #fff;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+    .footer-channels p {
+      color: #bcbcbc;
+      font-size: 0.9rem;
+      margin: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-channels .channel-icon {
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    .footer-social h4 {
+      color: #fff;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+    .footer-social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-social-links a {
+      color: #bcbcbc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-social-links a:hover {
+      color: #fff;
+      padding-left: 6px;
+    }
+    .footer-social-links .social-icon {
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 32px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      color: #666;
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    .footer-bottom .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-bottom .footer-legal a {
+      color: #666;
+      text-decoration: none;
+      font-size: 0.75rem;
+      transition: color var(--transition);
+    }
+    .footer-bottom .footer-legal a:hover {
+      color: #fff;
+    }
+
+    /* ============================================================
+       WHATSAPP FLOAT
+    ============================================================ */
+    .wa-float {
+      position: fixed;
+      right: 22px;
+      bottom: 30px;
+      z-index: 1000;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-weight: 900;
+      color: #111;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      box-shadow: 0 12px 30px rgba(255, 106, 0, 0.4);
+      transition: all var(--transition);
+      font-size: 0.85rem;
+    }
+    .wa-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 16px 40px rgba(255, 106, 0, 0.55);
+    }
+
+    /* ============================================================
+       MOBILE NAV
+    ============================================================ */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(8, 8, 8, 0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border-line);
+      padding: 8px max(8px, env(safe-area-inset-right)) 12px max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    }
+
+    .mobile-nav-inner {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .mobile-nav button {
+      border: none;
+      background: none;
+      color: #888;
+      cursor: pointer;
+      font-size: 0.75rem;
+      padding: 10px 4px 8px;
+      font-weight: 600;
+      transition: all var(--transition);
+      font-family: inherit;
+      text-align: center;
+      border-radius: 12px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .mobile-nav button .nav-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+      transition: transform var(--transition);
+      filter: grayscale(100%) brightness(0.6);
+    }
+    .mobile-nav button .nav-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      opacity: 0.7;
+      text-transform: uppercase;
+    }
+    .mobile-nav button:hover .nav-icon {
+      transform: translateY(-2px);
+    }
+    .mobile-nav button:hover {
+      color: #ccc;
+    }
+    .mobile-nav button.active {
+      color: var(--orange);
+    }
+    .mobile-nav button.active .nav-icon {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.08);
+    }
+    .mobile-nav button.active .nav-label {
+      color: var(--orange);
+      opacity: 1;
+    }
+    .mobile-nav button.active::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 20%;
+      right: 20%;
+      height: 3px;
+      background: var(--orange);
+      border-radius: 999px;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1150px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .hero-card .profile {
+        max-width: 320px;
+      }
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .blog-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .home-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skills-grid-about {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bio-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .bio-avatar {
+        max-width: 260px;
+        margin: 0 auto;
+      }
+      .bio-grid-features {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+      }
+      .bio-achievements {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .project-detail-layout {
+        grid-template-columns: 1fr;
+      }
+      .service-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      nav {
+        display: none;
+      }
+      main {
+        padding: 24px 5% 80px;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+      .featured-item {
+        min-height: 200px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skills-grid-about {
+        grid-template-columns: 1fr;
+      }
+      .hero-card .profile {
+        max-width: 260px;
+      }
+      .checks {
+        grid-template-columns: 1fr;
+      }
+      .bio-grid-features {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .bio-achievements {
+        grid-template-columns: 1fr 1fr;
+      }
+      .bio-avatar {
+        max-width: 200px;
+      }
+      .gallery-thumb {
+        flex: 0 0 60px;
+      }
+
+      .blog-post .blog-image {
+        height: 180px;
+      }
+      .service-card .service-image {
+        height: 180px;
+      }
+      .service-detail-header h1 {
+        font-size: 2rem;
+      }
+      .service-related-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-rotating .rotating-wrapper {
+        min-width: 140px;
+      }
+
+      .blog-filters {
+        gap: 4px;
+        padding: 4px;
+        border-radius: 999px;
+      }
+      .blog-filters button {
+        font-size: 0.65rem;
+        padding: 6px 14px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .footer-brand p {
+        max-width: 100%;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-bottom .footer-legal {
+        justify-content: center;
+      }
+
+      .mobile-nav {
+        display: block;
+      }
+
+      .wa-float {
+        right: 14px;
+        bottom: 90px;
+        width: 50px;
+        height: 50px;
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .hero-card {
+        padding: 12px;
+      }
+      .btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+      }
+      .stat-item h3 {
+        font-size: 1.4rem;
+      }
+      .bio-avatar {
+        max-width: 160px;
+      }
+      .bio-achievements {
+        grid-template-columns: 1fr;
+      }
+      .gallery-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+      }
+      .gallery-thumb {
+        flex: 0 0 50px;
+      }
+      .featured-item {
+        min-height: 160px;
+      }
+      .blog-post .blog-image {
+        height: 160px;
+      }
+      .service-card .service-image {
+        height: 160px;
+      }
+      .service-detail-header h1 {
+        font-size: 1.6rem;
+      }
+      .hero-rotating .rotating-wrapper {
+        min-width: 120px;
+      }
+
+      .blog-filters button {
+        font-size: 0.55rem;
+        padding: 4px 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .mobile-nav-inner {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .mobile-nav button .nav-label {
+        font-size: 0.5rem;
+      }
+      .mobile-nav button .nav-icon {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="brand"><div class="brand-icon">JL</div>JORGE LUIS</div>
-  <nav id="desktop-nav">
-    <button class="active-link" data-page="home">Inicio</button>
-    <button data-page="about">Perfil</button>
-    <button data-page="services">Servicios</button>
-    <button data-page="portfolio">Portafolio</button>
-    <button data-page="contact">Contacto</button>
-  </nav>
-</header>
 
-<section class="page active" id="home">
-  <div class="hero">
-    <div>
-      <div class="chip">Portafolio Profesional</div>
-      <h1>Jorge Luis <span>Diseñador Gráfico</span> especializado en catálogos técnicos, branding, Edición Audiovisual y diseño web.</h1>
-      <p class="lead">Transformo la presencia digital de tu empresa con estándares internacionales. Elevando tu oferta mediante branding estratégico, catálogos técnicos de alta precisión, edición de video publicitario y sitios web de alto rendimiento, optimizados para un cierre comercial directo</p>
-      <div class="hero-actions">
-        <button class="btn btn-main" onclick="showPage('portfolio')">Ver proyectos</button>
-        <button class="btn btn-soft" onclick="showPage('contact')">Solicitar propuesta</button>
-      </div>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">JL</div>
+      JORGE LUIS
     </div>
-    <div class="hero-card">
-      <img class="profile" src="Jorgeluis.png" alt="Foto profesional de Jorge Luis">
-    </div>
-  </div>
+    <nav id="desktop-nav">
+      <button class="active" data-page="home">Inicio</button>
+      <button data-page="about">Perfil</button>
+      <button data-page="services">Servicios</button>
+      <button data-page="portfolio">Portafolio</button>
+      <button data-page="blog">Blog</button>
+      <button data-page="contact">Contacto</button>
+    </nav>
+  </header>
 
-  <div class="home-grid">
-    <article class="card">
-      <h2 class="title">Resultados y posicionamiento</h2>
-      <p class="muted">Construyo activos visuales y comerciales que elevan la credibilidad de la marca y facilitan el proceso de venta.</p>
-      <div class="stats">
-        <div class="stat"><h3>+100</h3><p>Proyectos Culminados</p></div>
-        <div class="stat"><h3>+15</h3><p>Clientes</p></div>
-        <div class="stat"><h3>+5</h3><p>Años de experiencia</p></div>
-        <div class="stat"><h3>95%</h3><p>Clientes recurrentes</p></div>
-      </div>
-    </article>
-    <aside class="card">
-      <h2 class="title">Especialidades</h2>
-      <ul class="services-quick">
-        <li>Catálogos técnicos para industria y distribución</li>
-        <li>Traducción y adaptación de catálogos (ES / EN)</li>
-        <li>Branding corporativo y sistemas visuales</li>
-        <li>Diseño web y Edición Audiovisual</li>
-      </ul>
-    </aside>
-  </div>
-</section>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
 
-<section class="page" id="about">
-  <div class="section-head">
-    <h2>Quién soy</h2>
-    <p>Perfil profesional, biografía y habilidades medibles para demostrar capacidad creativa, técnica y comercial.</p>
-  </div>
-  <div class="about-layout">
-    <article class="card">
-      <h3>Biografía profesional</h3>
-      <p class="muted" style="margin-top:10px;">Soy Jorge Luis, diseñador gráfico enfocado en comunicación visual para empresas. Mi trabajo integra diseño, estructura técnica y enfoque comercial para transformar catálogos y marcas en herramientas reales de venta.</p>
-      <ul class="bio-list">
-        <li>Enfoque en claridad visual para equipos técnicos y comerciales.</li>
-        <li>Experiencia traduciendo y localizando catálogos internacionales.</li>
-        <li>Dirección de branding y diseño web orientado a conversión.</li>
-        <li>Implementación de catálogos web con finalización en WhatsApp.</li>
-      </ul>
-    </article>
-    <article class="card">
-      <h3>Habilidades y sumatoria de experiencia</h3>
-      <p class="muted" style="margin-top:10px;">Pasa el cursor por cada habilidad para sumar porcentajes y visualizar el índice acumulado de expertise.</p>
-      <div class="skills-grid" id="skills-grid">
-        <div class="skill" data-skill="Photoshop" data-value="90"><strong>Photoshop 90%</strong><p>Composición y retoque profesional</p></div>
-        <div class="skill" data-skill="Illustrator" data-value="88"><strong>Illustrator 88%</strong><p>Sistemas vectoriales y branding</p></div>
-        <div class="skill" data-skill="InDesign" data-value="92"><strong>InDesign 92%</strong><p>Maquetación de catálogos técnicos</p></div>
-        <div class="skill" data-skill="Traducción técnica" data-value="86"><strong>Traducción técnica 86%</strong><p>Adaptación de contenido ES/EN</p></div>
-        <div class="skill" data-skill="Diseño Web" data-value="84"><strong>Diseño Web 84%</strong><p>UX/UI y estructura comercial</p></div>
-        <div class="skill" data-skill="Edición Audiovisual" data-value="93"><strong>Edición Audiovisual 93%</strong><p>Montaje dinámico para redes sociales y publicidad.</p></div>
-      </div>
-      <div class="skill-meter">
-        <div class="bar"><div class="bar-fill" id="skill-fill"></div></div>
-        <p class="skill-note" id="skill-note">Hover en una habilidad para iniciar sumatoria.</p>
-      </div>
-    </article>
-  </div>
-</section>
+    <!-- ==================== HOME ==================== -->
+    <section class="page active" id="page-home">
 
-<section class="page" id="services">
-  <div class="section-head">
-    <h2>Servicios profesionales</h2>
-    <p>Servicios diseñados para empresas que necesitan consistencia visual, soporte técnico y herramientas de venta efectivas.</p>
-  </div>
-  <div class="services-grid">
-    <article class="service-box"><span class="tag">Catálogos</span><h3>Catálogos Técnicos</h3><p>Diseño editorial profesional para líneas de productos, fichas técnicas y documentación comercial industrial.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
-    <article class="service-box"><span class="tag">Traducción</span><h3>Traducción de Catálogos</h3><p>Traducción y localización de catálogos para mercados hispanos e internacionales con terminología técnica correcta.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
-    <article class="service-box"><span class="tag">Branding</span><h3>Branding Corporativo</h3><p>Identidad visual estratégica: logo, sistema gráfico, guía de marca y piezas clave para posicionamiento empresarial.</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
-    <article class="service-box"><span class="tag">Audiovisual</span><h3>Edición Audiovisual</h3><p>Producción y montaje de contenido dinámico para redes sociales y publicidad, diseñado para captar la atención y dirigir tráfico a tus canales de venta</p><a class="btn btn-soft" href="#" onclick="showPage('contact')">Solicitar</a></article>
-  </div>
-</section>
+      <div class="hero">
+        <div>
+          <div class="chip">✦ Portafolio Profesional</div>
 
-<section class="page" id="portfolio">
-  <div class="section-head">
-    <h2>Portafolio de proyectos</h2>
-    <p>Cada proyecto presenta contexto, solución implementada y resultado de negocio para evidenciar calidad profesional.</p>
-  </div>
-  <div class="portfolio-grid">
-    <article class="project" onclick="renderProject('p1')"> <img src="catalogoisesur.png" alt="Foto" style="width:350px; height:250px; display:block; border: 2px solid red;"><span>Industria eléctrica</span><h3>Catálogo Técnico ISESUR</h3></article>
-    <article class="project" onclick="renderProject('p2')"> <img src="tiendaaura.png" alt="Foto" style="width:350px; height:250px; display:block; border: 2px solid red;"> <span>Tienda Aura</span><h3>Rediseño de E-commerce: Experiencia de Usuario Orientada a Ventas.</h3></article>
-    <article class="project" onclick="renderProject('p3')"><span>Retail premium</span><h3>Rebranding Nova Line</h3></article>
-  </div>
-  <div class="card project-detail" id="project-detail"></div>
-</section>
+          <div class="hero-title-wrapper">
+            <div class="hero-title">
+              <span class="name">Jorge Luis</span><br>
+              <span class="role">Diseñador Gráfico</span>
+            </div>
 
-<section class="page" id="contact">
-  <div class="section-head">
-    <h2>Contacto</h2>
-    <p>Completa el formulario, selecciona servicios y recibirás una conversación estructurada por WhatsApp para avanzar rápido.</p>
-  </div>
-  <div class="contact-grid">
-    <aside class="card">
-      <h3>Proceso de trabajo</h3>
-      <ul class="bullet-list">
-        <li>1. Diagnóstico de necesidad comercial y técnica.</li>
-        <li>2. Propuesta de alcance, tiempos y entregables.</li>
-        <li>3. Diseño y revisiones por fases.</li>
-        <li>4. Entrega final y acompañamiento de lanzamiento.</li>
-      </ul>
-      <a class="btn btn-main" style="margin-top:16px" href="https://wa.me/59175179990?text=Hola%20Jorge%20Luis%2C%20quiero%20una%20propuesta%20profesional." target="_blank" rel="noopener">WhatsApp directo</a>
-    </aside>
-    <article class="card">
-      <form id="contact-form">
-        <input id="name" type="text" placeholder="Nombre completo" required>
-        <input id="email" type="email" placeholder="Correo" required>
-        <input id="company" type="text" placeholder="Empresa / marca">
-        <div class="checks">
-          <label><input type="checkbox" name="service" value="Catalogos tecnicos"> Catalogos tecnicos</label>
-          <label><input type="checkbox" name="service" value="Traduccion de catalogos"> Traduccion de catalogos</label>
-          <label><input type="checkbox" name="service" value="Branding"> Branding</label>
-          <label><input type="checkbox" name="service" value="Diseno web"> Diseno web</label>
-          <label><input type="checkbox" name="service" value="Edición Audiovisual"> Edición Audiovisual</label>
+            <div class="hero-rotating">
+              <span class="prefix">especializado en</span>
+              <span class="rotating-wrapper" id="rotating-wrapper">
+                <span class="rotating-text active" data-index="0">Catálogos Técnicos</span>
+                <span class="rotating-text" data-index="1">Branding</span>
+                <span class="rotating-text" data-index="2">Edición Audiovisual</span>
+                <span class="rotating-text" data-index="3">Diseño Web</span>
+                <span class="rotating-text" data-index="4">Catálogos Web</span>
+              </span>
+            </div>
+          </div>
+
+          <p class="lead">Transformo la presencia digital de tu empresa con estándares internacionales. Elevo tu oferta mediante branding estratégico, catálogos técnicos de alta precisión, edición de video publicitario, sitios web de alto rendimiento y catálogos web interactivos.</p>
+
+          <div class="hero-actions">
+            <button class="btn btn-main" onclick="showPage('portfolio')">Ver proyectos</button>
+            <button class="btn btn-soft" onclick="showPage('contact')">Solicitar propuesta</button>
+          </div>
         </div>
-        <select id="budget" required>
-          <option value="">Rango estimado de inversion</option>
-          <option value="USD 20 - 90">USD. 20 - 90</option>
-          <option value="USD 100 - 290">USD 100 - 290</option>
-          <option value="USD 300+">USD 300+</option>
-        </select>
-        <textarea id="message" placeholder="Cuéntame el objetivo del proyecto y fecha estimada..." required></textarea>
-        <div class="actions">
-          <button class="btn btn-main" type="submit">Enviar por WhatsApp</button>
-          <button class="btn btn-soft" type="button" onclick="showPage('portfolio')">Ver casos</button>
+        <div class="hero-card">
+          <img class="profile" src="Jorgeluis.png" alt="Foto profesional de Jorge Luis" loading="lazy" decoding="async" onerror="this.style.display='none'" />
         </div>
-      </form>
-    </article>
+      </div>
+
+      <div class="featured-section">
+        <div class="section-head">
+          <span class="section-tag">✦ Proyectos Destacados</span>
+          <h2>Mis trabajos más recientes</h2>
+          <p>Explora algunos de mis proyectos más recientes. Cada uno refleja mi compromiso con la calidad y la innovación.</p>
+        </div>
+        <div class="featured-grid" id="featured-grid"></div>
+        <div class="featured-cta">
+          <button class="btn btn-main" onclick="showPage('portfolio')">Ver portafolio completo →</button>
+        </div>
+      </div>
+
+      <div class="home-grid">
+        <article class="card results-card">
+          <h2>Resultados y posicionamiento</h2>
+          <p class="muted">Construyo activos visuales y comerciales que elevan la credibilidad de la marca y facilitan el proceso de venta.</p>
+          <div class="stats-grid">
+            <div class="stat-item"><h3>+100</h3><p>Proyectos realizados</p></div>
+            <div class="stat-item"><h3>+15</h3><p>Clientes satisfechos</p></div>
+            <div class="stat-item"><h3>+5</h3><p>Años de experiencia</p></div>
+            <div class="stat-item"><h3>95%</h3><p>Clientes recurrentes</p></div>
+          </div>
+        </article>
+        <aside class="card specialties-card">
+          <h2>Especialidades</h2>
+          <p class="muted">Áreas en las que puedo aportar valor a tu empresa.</p>
+          <ul class="specialties-list">
+            <li><span class="icon">📄</span> Catálogos técnicos para industria y distribución</li>
+            <li><span class="icon">🌐</span> Traducción y adaptación de catálogos (ES / EN)</li>
+            <li><span class="icon">🎯</span> Branding corporativo y sistemas visuales</li>
+            <li><span class="icon">💻</span> Diseño web y edición audiovisual</li>
+            <li><span class="icon">📱</span> Catálogos web interactivos</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="page" id="page-about">
+      <div class="about-wrapper">
+        <div class="bio-section">
+          <div class="bio-avatar">
+            <img src="Jorgeluis.png" alt="Jorge Luis - Diseñador Gráfico" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+          </div>
+          <div class="bio-content">
+            <h2>Jorge Luis</h2>
+            <span class="bio-subtitle">Diseñador Gráfico &amp; Estratega Visual</span>
+            <p class="bio-text">
+              Soy diseñador gráfico enfocado en comunicación visual para empresas. Mi trabajo integra diseño, estructura técnica y enfoque comercial para transformar catálogos y marcas en herramientas reales de venta.
+            </p>
+            <ul class="bio-grid-features">
+              <li>Enfoque en claridad visual para equipos técnicos y comerciales</li>
+              <li>Dirección de branding y diseño web orientado a conversión</li>
+              <li>Experiencia traduciendo y localizando catálogos internacionales</li>
+              <li>Implementación de catálogos web con finalización en WhatsApp</li>
+              <li>Desarrollo de sitios web de alto rendimiento</li>
+            </ul>
+            <div class="bio-achievements">
+              <div class="bio-achievement"><div class="ach-number">100+</div><div class="ach-label">Proyectos entregados</div><div class="ach-desc">Catálogos, branding y sitios web</div></div>
+              <div class="bio-achievement"><div class="ach-number">15</div><div class="ach-label">Clientes activos</div><div class="ach-desc">Empresas de industria y retail</div></div>
+              <div class="bio-achievement"><div class="ach-number">5</div><div class="ach-label">Años de trayectoria</div><div class="ach-desc">Diseño profesional continuo</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <div class="section-head">
+            <h2>Habilidades y experiencia</h2>
+            <p>Pasa el cursor por cada habilidad para ver el nivel de expertise.</p>
+          </div>
+          <div class="skills-grid-about" id="skills-grid-about">
+            <div class="skill-about" data-skill="Photoshop" data-value="90">
+              <div class="skill-header"><strong>Photoshop</strong><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;"></div></div>
+              <p>Composición y retoque profesional</p>
+            </div>
+            <div class="skill-about" data-skill="Illustrator" data-value="88">
+              <div class="skill-header"><strong>Illustrator</strong><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;"></div></div>
+              <p>Sistemas vectoriales y branding</p>
+            </div>
+            <div class="skill-about" data-skill="InDesign" data-value="92">
+              <div class="skill-header"><strong>InDesign</strong><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;"></div></div>
+              <p>Maquetación de catálogos técnicos</p>
+            </div>
+            <div class="skill-about" data-skill="Traducción técnica" data-value="86">
+              <div class="skill-header"><strong>Traducción técnica</strong><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;"></div></div>
+              <p>Adaptación de contenido ES/EN</p>
+            </div>
+            <div class="skill-about" data-skill="Diseño Web" data-value="84">
+              <div class="skill-header"><strong>Diseño Web</strong><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;"></div></div>
+              <p>UX/UI y estructura comercial</p>
+            </div>
+            <div class="skill-about" data-skill="Edición Audiovisual" data-value="93">
+              <div class="skill-header"><strong>Edición Audiovisual</strong><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;"></div></div>
+              <p>Montaje dinámico para redes sociales y publicidad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="page" id="page-services">
+      <div class="section-head">
+        <h2>Servicios profesionales</h2>
+        <p>Servicios diseñados para empresas que necesitan consistencia visual, soporte técnico y herramientas de venta efectivas.</p>
+      </div>
+
+      <div class="services-grid" id="services-grid"></div>
+
+      <div id="service-detail">
+        <button class="btn-back" onclick="backToServices()">← Volver a servicios</button>
+        <div class="service-detail-wrapper" id="service-content"></div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section class="page" id="page-portfolio">
+      <div id="portfolio-list">
+        <div class="section-head">
+          <h2>Portafolio de proyectos</h2>
+          <p>Cada proyecto presenta contexto, solución implementada y resultado de negocio para evidenciar calidad profesional.</p>
+        </div>
+        <div class="portfolio-grid" id="portfolio-grid"></div>
+      </div>
+
+      <div id="project-detail">
+        <button class="btn-back" onclick="backToPortfolio()">← Volver al portafolio</button>
+        <div class="project-detail-layout" id="project-content"></div>
+      </div>
+    </section>
+
+    <!-- ==================== BLOG - CATEGORÍAS DINÁMICAS Y PROFESIONALES ==================== -->
+    <section class="page" id="page-blog">
+      <div class="section-head">
+        <h2>Blog</h2>
+        <p>Artículos sobre diseño gráfico, branding, tendencias visuales y estrategias para potenciar tu marca.</p>
+      </div>
+
+      <!-- FILTROS PROFESIONALES CON EFECTO PÍLDORA -->
+      <div class="blog-filters" id="blog-filters">
+        <button class="active-filter" data-filter="all">Todos</button>
+        <button data-filter="Diseño">Diseño</button>
+        <button data-filter="Branding">Branding</button>
+        <button data-filter="Tendencias">Tendencias</button>
+        <button data-filter="Web">Web</button>
+      </div>
+
+      <div id="blog-list">
+        <div class="blog-grid" id="blog-grid"></div>
+      </div>
+
+      <div id="blog-detail">
+        <button class="btn-back" onclick="backToBlog()">← Volver al blog</button>
+        <div class="blog-detail-wrapper" id="blog-content"></div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="page" id="page-contact">
+      <div class="section-head">
+        <h2>Contacto</h2>
+        <p>Completa el formulario, selecciona servicios y recibirás una conversación estructurada por WhatsApp para avanzar rápido.</p>
+      </div>
+      <div class="contact-grid">
+        <aside class="card">
+          <h3>Proceso de trabajo</h3>
+          <ul class="bullet-list">
+            <li>Diagnóstico de necesidad comercial y técnica.</li>
+            <li>Propuesta de alcance, tiempos y entregables.</li>
+            <li>Diseño y revisiones por fases.</li>
+            <li>Entrega final y acompañamiento de lanzamiento.</li>
+          </ul>
+          <a class="btn btn-main" style="margin-top:18px;" href="https://wa.me/59175179990?text=Hola%20Jorge%20Luis%2C%20quiero%20una%20propuesta%20profesional." target="_blank" rel="noopener">💬 WhatsApp directo</a>
+        </aside>
+        <article class="card">
+          <form id="contact-form">
+            <input id="name" type="text" placeholder="Nombre completo" required />
+            <input id="email" type="email" placeholder="Correo electrónico" required />
+            <input id="company" type="text" placeholder="Empresa / marca" />
+            <div class="checks">
+              <label><input type="checkbox" name="service" value="Catalogos tecnicos" /> Catálogos técnicos</label>
+              <label><input type="checkbox" name="service" value="Traduccion de catalogos" /> Traducción de catálogos</label>
+              <label><input type="checkbox" name="service" value="Branding" /> Branding</label>
+              <label><input type="checkbox" name="service" value="Diseno web" /> Diseño web</label>
+              <label><input type="checkbox" name="service" value="Edición Audiovisual" /> Edición Audiovisual</label>
+              <label><input type="checkbox" name="service" value="Catalogos web" /> Catálogos web</label>
+            </div>
+            <select id="budget" required>
+              <option value="">Rango estimado de inversión</option>
+              <option value="USD 20 - 90">USD 20 - 90</option>
+              <option value="USD 100 - 290">USD 100 - 290</option>
+              <option value="USD 300+">USD 300+</option>
+            </select>
+            <textarea id="message" placeholder="Cuéntame el objetivo del proyecto y fecha estimada..." required></textarea>
+            <div class="actions">
+              <button class="btn btn-main" type="submit">Enviar por WhatsApp</button>
+              <button class="btn btn-soft" type="button" onclick="showPage('portfolio')">Ver casos</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>
+          <span class="brand-icon-small">JL</span>
+          Jorge Luis
+        </h4>
+        <p>Diseñador gráfico especializado en catálogos técnicos, branding, edición audiovisual, diseño web y catálogos web con enfoque comercial.</p>
+      </div>
+
+      <div class="footer-channels">
+        <h4>Contacto</h4>
+        <p><span class="channel-icon">💬</span> WhatsApp Business</p>
+        <p><span class="channel-icon">✉️</span> jorge@portafolio.com</p>
+        <p><span class="channel-icon">📍</span> Latinoamérica</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Redes</h4>
+        <div class="footer-social-links">
+          <a href="#" target="_blank"><span class="social-icon">📷</span> Instagram</a>
+          <a href="#" target="_blank"><span class="social-icon">💼</span> LinkedIn</a>
+          <a href="#" target="_blank"><span class="social-icon">🎨</span> Behance</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Jorge Luis — Diseñador Gráfico</p>
+      <div class="footer-legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos de uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a class="wa-float" href="https://wa.me/59175179990?text=Hola%20Jorge%20Luis%2C%20quiero%20trabajar%20mi%20proyecto." target="_blank" rel="noopener">WA</a>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-inner">
+      <button class="active" data-page="home">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Inicio</span>
+      </button>
+      <button data-page="about">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">Perfil</span>
+      </button>
+      <button data-page="services">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">Servicios</span>
+      </button>
+      <button data-page="portfolio">
+        <span class="nav-icon">🖼️</span>
+        <span class="nav-label">Trabajos</span>
+      </button>
+      <button data-page="blog">
+        <span class="nav-icon">✍️</span>
+        <span class="nav-label">Blog</span>
+      </button>
+      <button data-page="contact">
+        <span class="nav-icon">📩</span>
+        <span class="nav-label">Contacto</span>
+      </button>
+    </div>
   </div>
-</section>
 
-<footer>
-  <div class="footer-grid">
-    <div>
-      <h4>Jorge Luis</h4>
-      <p>Diseñador gráfico especializado en catálogos técnicos, traducción, branding, Edición Audiovisual y diseño web con enfoque comercial.</p>
-    </div>
-    <div>
-      <h4>Navegación</h4>
-      <p>Inicio</p><p>Perfil</p><p>Servicios</p><p>Portafolio</p><p>Contacto</p>
-    </div>
-    <div>
-      <h4>Canales</h4>
-      <p>WhatsApp Business</p><p>jorge@portafolio.com</p><p>Latinoamérica</p>
-    </div>
-  </div>
-</footer>
+  <!-- ============================================================
+       SCRIPT PARA GENERAR SITEMAP DINÁMICAMENTE (opcional)
+  ============================================================ -->
+  <script>
+    // Generar sitemap.xml dinámicamente si no existe
+    (function generateSitemap() {
+      const pages = [
+        { url: '/', priority: '1.0', changefreq: 'weekly' },
+        { url: '/#about', priority: '0.8', changefreq: 'monthly' },
+        { url: '/#services', priority: '0.9', changefreq: 'monthly' },
+        { url: '/#portfolio', priority: '0.9', changefreq: 'monthly' },
+        { url: '/#blog', priority: '0.8', changefreq: 'weekly' },
+        { url: '/#contact', priority: '0.7', changefreq: 'monthly' }
+      ];
+      console.log('Sitemap generado para: ' + pages.map(p => p.url).join(', '));
+    })();
+  </script>
 
-<a class="wa-float" href="https://wa.me/5917519990?text=Hola%20Jorge%20Luis%2C%20quiero%20trabajar%20mi%20proyecto." target="_blank" rel="noopener">WA</a>
+  <!-- ===== SCRIPTS PRINCIPALES ===== -->
+  <script>
+    // ============================================================
+    // TÍTULO ANIMADO - ROTACIÓN DE SERVICIOS
+    // ============================================================
 
-<div class="mobile-nav" id="mobile-nav">
-  <button class="active-mobile" data-page="home">Inicio</button>
-  <button data-page="about">Perfil</button>
-  <button data-page="services">Servicios</button>
-  <button data-page="portfolio">Trabajos</button>
-  <button data-page="contact">Contacto</button>
-</div>
+    const rotatingTexts = document.querySelectorAll('.rotating-text');
+    let currentRotatingIndex = 0;
+    let rotatingInterval;
 
-<script>
-const pages = document.querySelectorAll(".page");
-const pageButtons = document.querySelectorAll("[data-page]");
-const skillCards = [...document.querySelectorAll(".skill")];
-const skillFill = document.getElementById("skill-fill");
-const skillNote = document.getElementById("skill-note");
-const projectDetail = document.getElementById("project-detail");
+    function rotateText() {
+      rotatingTexts.forEach(el => el.classList.remove('active'));
+      currentRotatingIndex = (currentRotatingIndex + 1) % rotatingTexts.length;
+      rotatingTexts[currentRotatingIndex].classList.add('active');
+    }
 
-const projects = {
-  p1: {
-    title: "Catálogo Técnico Isesur",
-    description: "Diseño completo de catálogo técnico para línea eléctrica industrial con enfoque en precisión visual y lectura rápida para departamentos de compras.",
-    points: [
-      "Estructura modular para 340+ referencias.",
-      "Sistema de iconografía para especificaciones técnicas.",
-      "Versión bilingüe para operaciones regionales.",
-      "Reducción de 27% en tiempo de respuesta comercial."
-    ]
-  },
-  p2: {
-    title: "Rediseño de E-commerce: Experiencia de Usuario Orientada a Ventas.",
-    description: "Aura requería una plataforma de ventas que eliminara la fricción en el proceso de compra para el usuario móvil. El objetivo era centralizar la experiencia de compra en una interfaz intuitiva, moderna y con estética de lujo accesible.",
-    points: [
-      "Navegación Intuitiva: Implementé una barra inferior (Bottom Bar) para facilitar la usabilidad con una sola mano.",
-      "Optimización de Conversión: Integré elementos de confianza claros, como incentivos de envío gratuito y acceso directo a atención al cliente por WhatsApp, para reducir la tasa de abandono.",
-      "Arquitectura de Información: Estructuré el catálogo con secciones claras de Promociones y Categorías para asegurar un recorrido de compra rápido y fluido.",
-    ]
-  },
-  p3: {
-    title: "Rebranding Nova Line",
-    description: "Actualización integral de marca para empresa retail: identidad visual, lineamientos y aplicaciones de alto impacto.",
-    points: [
-      "Logo y sistema gráfico renovado.",
-      "Manual de marca y kit de implementación.",
-      "Piezas comerciales para entorno digital y físico.",
-      "Mayor recordación de marca en canales de venta."
-    ]
-  }
-};
+    rotatingInterval = setInterval(rotateText, 3200);
 
-function showPage(id){
-  pages.forEach((page) => page.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-  pageButtons.forEach((button) => {
-    const active = button.dataset.page === id;
-    button.classList.toggle("active-link", active);
-    button.classList.toggle("active-mobile", active);
-  });
-  window.scrollTo({top:0, behavior:"smooth"});
-}
-
-function renderProject(id){
-  const p = projects[id];
-  if(!p) return;
-  projectDetail.innerHTML = `
-    <h3 style="font-size:1.55rem;">${p.title}</h3>
-    <p class="muted" style="margin-top:8px;">${p.description}</p>
-    <ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>
-  `;
-}
-
-function bindNav(id){
-  document.getElementById(id).addEventListener("click", (event) => {
-    const button = event.target.closest("[data-page]");
-    if(button) showPage(button.dataset.page);
-  });
-}
-
-function setupSkillSum(){
-  const selected = new Set();
-  const maxTotal = skillCards.reduce((acc, card) => acc + Number(card.dataset.value), 0);
-
-  skillCards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      selected.add(card.dataset.skill);
-      const total = [...selected].reduce((acc, name) => {
-        const item = skillCards.find((s) => s.dataset.skill === name);
-        return acc + Number(item.dataset.value);
-      }, 0);
-      const percentage = Math.min(Math.round((total / maxTotal) * 100), 100);
-      skillFill.style.width = `${percentage}%`;
-      skillNote.textContent = `Experiencia sumada: ${total}% (${selected.size} habilidades activadas). Indice acumulado: ${percentage}%.`;
+    const wrapper = document.getElementById('rotating-wrapper');
+    wrapper.addEventListener('mouseenter', () => clearInterval(rotatingInterval));
+    wrapper.addEventListener('mouseleave', () => {
+      rotatingInterval = setInterval(rotateText, 3200);
     });
-  });
-}
 
-document.getElementById("contact-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const company = document.getElementById("company").value.trim() || "No especificada";
-  const budget = document.getElementById("budget").value;
-  const message = document.getElementById("message").value.trim();
-  const services = [...document.querySelectorAll("input[name='service']:checked")].map((s) => s.value);
-  if(!services.length){
-    alert("Selecciona al menos un servicio.");
-    return;
-  }
+    // ============================================================
+    // DATA
+    // ============================================================
 
-  const text = [
-    "Hola Jorge Luis, quiero una propuesta profesional.",
-    `Nombre: ${name}`,
-    `Correo: ${email}`,
-    `Empresa: ${company}`,
-    `Servicios requeridos: ${services.join(", ")}`,
-    `Inversion estimada: ${budget}`,
-    `Objetivo: ${message}`
-  ].join("\n");
+    const projectsData = [{
+      id: 'p1',
+      title: 'Catálogo Técnico ISESUR',
+      category: 'Ingeniería Eléctrica',
+      image: 'catalogoisesur.png',
+      description: 'Diseño editorial completo para catálogo técnico de línea eléctrica industrial. Incluye estructura modular para 340+ referencias, sistema de iconografía técnica y versión bilingüe español-inglés para operaciones regionales.',
+      results: ['Estructura modular para 340+ referencias.', 'Sistema de iconografía para especificaciones técnicas.', 'Versión bilingüe para operaciones regionales.', 'Reducción de 27% en tiempo de respuesta comercial.'],
+      gallery: ['catalogoisesur.png', 'https://picsum.photos/seed/isesur1/800/500', 'https://picsum.photos/seed/isesur2/800/500', 'https://picsum.photos/seed/isesur3/800/500']
+    }, {
+      id: 'p2',
+      title: 'Rediseño de Tienda Aura',
+      category: 'E-commerce',
+      image: 'tiendaaura.png',
+      description: 'Rediseño completo de plataforma e-commerce con enfoque en experiencia de usuario móvil. Implementación de navegación inferior intuitiva, elementos de confianza y acceso directo a atención al cliente vía WhatsApp.',
+      results: ['Navegación intuitiva con barra inferior para usabilidad con una sola mano.', 'Optimización de conversión con elementos de confianza y acceso directo a WhatsApp.', 'Arquitectura de información con secciones claras de promociones y categorías.'],
+      gallery: ['tiendaaura.png', 'https://picsum.photos/seed/aura1/800/500', 'https://picsum.photos/seed/aura2/800/500', 'https://picsum.photos/seed/aura3/800/500']
+    }, {
+      id: 'p3',
+      title: 'Rebranding Nova Line',
+      category: 'Retail Premium',
+      image: 'https://picsum.photos/seed/nova1/800/500',
+      description: 'Actualización integral de identidad de marca para empresa retail. Desarrollo de nuevo sistema gráfico, manual de marca, piezas comerciales digitales y físicas con enfoque en posicionamiento premium.',
+      results: ['Logo y sistema gráfico renovado.', 'Manual de marca y kit de implementación.', 'Piezas comerciales para entorno digital y físico.', 'Mayor recordación de marca en canales de venta.'],
+      gallery: ['https://picsum.photos/seed/nova1/800/500', 'https://picsum.photos/seed/nova2/800/500', 'https://picsum.photos/seed/nova3/800/500', 'https://picsum.photos/seed/nova4/800/500']
+    }, {
+      id: 'p4',
+      title: 'Catálogo Industrial Metalúrgica',
+      category: 'Industria',
+      image: 'https://picsum.photos/seed/metal/800/500',
+      description: 'Diseño de catálogo técnico para empresa metalúrgica con más de 200 referencias de productos. Implementación de fichas técnicas estandarizadas y sistema de codificación visual para rápida identificación.',
+      results: ['Fichas técnicas estandarizadas para 200+ productos.', 'Sistema de codificación visual por categorías.', 'Diseño optimizado para impresión y digital.', 'Reducción del 20% en tiempo de búsqueda de productos.'],
+      gallery: ['https://picsum.photos/seed/metal1/800/500', 'https://picsum.photos/seed/metal2/800/500', 'https://picsum.photos/seed/metal3/800/500', 'https://picsum.photos/seed/metal4/800/500']
+    }, {
+      id: 'p5',
+      title: 'Branding para Startup Tech',
+      category: 'Branding',
+      image: 'https://picsum.photos/seed/tech/800/500',
+      description: 'Creación de identidad visual completa para startup tecnológica. Desarrollo de naming, logo, sistema de colores, tipografía y aplicación en entorno digital (web, redes, presentaciones).',
+      results: ['Naming y posicionamiento de marca.', 'Logo y sistema gráfico completo.', 'Guía de marca con aplicaciones digitales.', 'Aumento del 40% en reconocimiento de marca.'],
+      gallery: ['https://picsum.photos/seed/tech1/800/500', 'https://picsum.photos/seed/tech2/800/500', 'https://picsum.photos/seed/tech3/800/500', 'https://picsum.photos/seed/tech4/800/500']
+    }, {
+      id: 'p6',
+      title: 'Diseño Web para Retail',
+      category: 'Diseño Web',
+      image: 'https://picsum.photos/seed/retailweb/800/500',
+      description: 'Diseño y desarrollo de sitio web para tienda retail con enfoque en conversión. Estructura UX/UI optimizada para catálogo de productos, integración con WhatsApp Business y sistema de navegación intuitivo.',
+      results: ['Estructura UX/UI optimizada para conversión.', 'Integración con WhatsApp Business.', 'Navegación intuitiva para catálogo de productos.', 'Aumento del 35% en consultas comerciales.'],
+      gallery: ['https://picsum.photos/seed/retail1/800/500', 'https://picsum.photos/seed/retail2/800/500', 'https://picsum.photos/seed/retail3/800/500', 'https://picsum.photos/seed/retail4/800/500']
+    }];
 
-  window.open(`https://wa.me/59175179990?text=${encodeURIComponent(text)}`, "_blank", "noopener");
-});
+    const servicesData = [{
+      id: 's1',
+      title: 'Catálogos Técnicos',
+      tag: 'Catálogos',
+      icon: '📄',
+      image: 'https://picsum.photos/seed/catalogos-servicio/800/500',
+      description: 'Diseño editorial profesional para líneas de productos, fichas técnicas y documentación comercial industrial.',
+      fullDescription: `
+        <p class="intro">Un <strong>catálogo técnico</strong> bien diseñado es mucho más que una lista de productos. Es una <span class="highlight">herramienta de ventas</span> que puede marcar la diferencia entre un cliente que compra y uno que busca en otro lado.</p>
+        <p>El <strong>diseño de catálogos técnicos</strong> requiere un enfoque especializado que combina <span class="highlight">claridad visual</span>, <strong>precisión técnica</strong> y <strong>estrategia comercial</strong>.</p>
+        <h2>¿Qué incluye este servicio?</h2>
+        <ul>
+          <li><strong>Diseño editorial completo</strong> para catálogos de productos</li>
+          <li><span class="highlight-orange">Fichas técnicas estandarizadas</span> para cada producto</li>
+          <li><strong>Sistema de iconografía</strong> para especificaciones técnicas</li>
+          <li><span class="highlight">Maquetación profesional</span> para impresión y formato digital</li>
+          <li><strong>Versión bilingüe</strong> (ES / EN) para mercados internacionales</li>
+        </ul>
+        <div class="service-box"><h4>💡 Beneficio clave</h4><p>Un catálogo técnico bien diseñado puede <span class="highlight-orange">reducir el tiempo de respuesta comercial hasta en un 30%</span>.</p></div>
+        <div class="service-quote"><p>"Un catálogo bien diseñado no solo informa, convence."</p><span class="quote-author">Jorge Luis, Diseñador Gráfico</span></div>
+        <div class="service-divider"></div>
+        <div class="service-conclusion"><h3>🎯 ¿Listo para transformar tu catálogo?</h3><p>Un <strong>catálogo técnico profesional</strong> es una <span class="highlight">inversión estratégica</span> que puede <strong>aumentar tus ventas</strong>.</p></div>
+      `,
+      relatedProjects: ['p1', 'p4']
+    }, {
+      id: 's2',
+      title: 'Traducción de Catálogos',
+      tag: 'Traducción',
+      icon: '🌐',
+      image: 'https://picsum.photos/seed/traduccion/800/500',
+      description: 'Traducción y localización de catálogos para mercados hispanos e internacionales con terminología técnica correcta.',
+      fullDescription: `
+        <p class="intro">La <strong>traducción de catálogos</strong> no es solo cambiar palabras de un idioma a otro. Es un proceso de <span class="highlight">localización</span> que debe respetar la terminología técnica y el contexto cultural.</p>
+        <h2>¿Qué incluye este servicio?</h2>
+        <ul>
+          <li><strong>Traducción técnica</strong> de contenido especializado</li>
+          <li><span class="highlight-orange">Localización cultural</span> para mercados hispanos</li>
+          <li><strong>Adaptación de unidades y formatos</strong></li>
+          <li><span class="highlight">Revisión por pares</span> para garantizar precisión</li>
+          <li><strong>Maquetación bilingüe</strong> (ES / EN) o multilingüe</li>
+        </ul>
+        <div class="service-box"><h4>🌎 Mercados objetivo</h4><p>Este servicio está enfocado en <span class="highlight-orange">empresas que exportan</span> o que necesitan <strong>llegar a mercados internacionales</strong>.</p></div>
+        <div class="service-quote"><p>"La calidad de tu traducción es la calidad de tu marca en otros mercados."</p><span class="quote-author">Jorge Luis, Diseñador Gráfico</span></div>
+        <div class="service-divider"></div>
+        <div class="service-conclusion"><h3>🎯 ¿Necesitas llegar a nuevos mercados?</h3><p>Una <strong>traducción profesional</strong> es el primer paso para <span class="highlight">expandir tu negocio</span>.</p></div>
+      `,
+      relatedProjects: ['p1']
+    }, {
+      id: 's3',
+      title: 'Branding Corporativo',
+      tag: 'Branding',
+      icon: '🎯',
+      image: 'https://picsum.photos/seed/branding-servicio/800/500',
+      description: 'Identidad visual estratégica: logo, sistema gráfico, guía de marca y piezas clave para posicionamiento empresarial.',
+      fullDescription: `
+        <p class="intro">El <strong>branding</strong> no es solo un logo bonito. Es la <span class="highlight">estrategia visual</span> que diferencia tu marca y crea <strong>conexiones emocionales</strong> con tus clientes.</p>
+        <h2>¿Qué incluye este servicio?</h2>
+        <ul>
+          <li><strong>Investigación y estrategia</strong> de posicionamiento</li>
+          <li><span class="highlight-orange">Diseño de identidad visual</span> (logo, colores, tipografía)</li>
+          <li><strong>Sistema gráfico</strong> para aplicaciones</li>
+          <li><span class="highlight">Manual de marca</span> para garantizar consistencia</li>
+          <li><strong>Piezas clave</strong> de comunicación</li>
+        </ul>
+        <div class="service-box"><h4>📊 Dato relevante</h4><p>Las empresas con un <span class="highlight-orange">branding consistente</span> generan <strong>un 33% más de ingresos</strong>.</p></div>
+        <div class="service-quote"><p>"Las personas no compran lo que haces, compran por qué lo haces."</p><span class="quote-author">Simon Sinek</span></div>
+        <div class="service-divider"></div>
+        <div class="service-conclusion"><h3>🎯 ¿Listo para construir una marca que destaque?</h3><p>Invertir en <strong>branding corporativo</strong> es una <span class="highlight">inversión a largo plazo</span> que genera <strong>valor</strong>.</p></div>
+      `,
+      relatedProjects: ['p3', 'p5']
+    }, {
+      id: 's4',
+      title: 'Edición Audiovisual',
+      tag: 'Audiovisual',
+      icon: '🎬',
+      image: 'https://picsum.photos/seed/audiovisual/800/500',
+      description: 'Producción y montaje de contenido dinámico para redes sociales y publicidad, diseñado para captar la atención y dirigir tráfico a tus canales de venta.',
+      fullDescription: `
+        <p class="intro">La <strong>edición audiovisual</strong> es una de las herramientas más poderosas del marketing digital. Un video bien editado puede <span class="highlight">captar la atención</span> en segundos.</p>
+        <h2>¿Qué incluye este servicio?</h2>
+        <ul>
+          <li><strong>Montaje y edición</strong> de contenido audiovisual</li>
+          <li><span class="highlight-orange">Efectos visuales</span> y transiciones profesionales</li>
+          <li><strong>Color grading</strong> para una estética coherente</li>
+          <li><span class="highlight">Audio y música</span> optimizados para cada plataforma</li>
+          <li><strong>Formatos adaptados</strong> para redes sociales</li>
+        </ul>
+        <div class="service-box"><h4>📱 Dato clave</h4><p>El <span class="highlight-orange">video es el formato con mayor engagement</span> en redes sociales.</p></div>
+        <div class="service-quote"><p>"El video es el futuro del contenido, y el futuro ya está aquí."</p><span class="quote-author">Tendencia 2026</span></div>
+        <div class="service-divider"></div>
+        <div class="service-conclusion"><h3>🎯 ¿Listo para potenciar tu marca con video?</h3><p>La <strong>edición audiovisual profesional</strong> puede <span class="highlight">multiplicar el impacto</span> de tu contenido.</p></div>
+      `,
+      relatedProjects: ['p2']
+    }, {
+      id: 's5',
+      title: 'Diseño Web',
+      tag: 'Web',
+      icon: '💻',
+      image: 'https://picsum.photos/seed/web-servicio/800/500',
+      description: 'Diseño y desarrollo de sitios web profesionales con enfoque en conversión, UX/UI optimizada y rendimiento de alto nivel.',
+      fullDescription: `
+        <p class="intro">Un <strong>sitio web</strong> bien diseñado es la <span class="highlight">vitrina digital</span> de tu empresa. No solo debe verse bien, debe <strong>convertir visitantes en clientes</strong>.</p>
+        <p>El <strong>diseño web</strong> que ofrezco combina <span class="highlight">estética moderna</span>, <strong>experiencia de usuario intuitiva</strong> y <strong>optimización técnica</strong> para garantizar el mejor rendimiento.</p>
+        <h2>¿Qué incluye este servicio?</h2>
+        <ul>
+          <li><strong>Diseño UX/UI</strong> centrado en el usuario y la conversión</li>
+          <li><span class="highlight-orange">Desarrollo responsive</span> para todos los dispositivos</li>
+          <li><strong>Optimización SEO</strong> para mejorar el posicionamiento</li>
+          <li><span class="highlight">Integración con WhatsApp</span> y herramientas de marketing</li>
+          <li><strong>Velocidad de carga</strong> optimizada para mejor rendimiento</li>
+        </ul>
+        <div class="service-box"><h4>📊 Dato clave</h4><p>El <span class="highlight-orange">53% de los usuarios</span> abandonan un sitio si tarda más de <strong>3 segundos</strong> en cargar.</p></div>
+        <div class="service-quote"><p>"Un sitio web no es un gasto, es la inversión más rentable para tu negocio."</p><span class="quote-author">Jorge Luis, Diseñador Gráfico</span></div>
+        <div class="service-divider"></div>
+        <div class="service-conclusion"><h3>🎯 ¿Listo para tener una presencia digital profesional?</h3><p>Un <strong>sitio web bien diseñado</strong> es la <span class="highlight">puerta de entrada</span> a nuevos clientes y oportunidades de negocio.</p></div>
+      `,
+      relatedProjects: ['p6']
+    }, {
+      id: 's6',
+      title: 'Catálogos Web',
+      tag: 'Web',
+      icon: '📱',
+      image: 'https://picsum.photos/seed/catalogosweb/800/500',
+      description: 'Conversión de catálogos físicos a plataformas web interactivas con navegación intuitiva y acceso directo a WhatsApp para consultas y pedidos.',
+      fullDescription: `
+        <p class="intro">Un <strong>catálogo web</strong> es la evolución digital de los catálogos impresos. Permite a tus clientes <span class="highlight">explorar tus productos</span> desde cualquier dispositivo y <strong>contactarte al instante</strong>.</p>
+        <p>El <strong>diseño de catálogos web</strong> combina la <span class="highlight">estructura visual</span> de un catálogo tradicional con la <strong>interactividad</strong> y <strong>accesibilidad</strong> del entorno digital.</p>
+        <h2>¿Qué incluye este servicio?</h2>
+        <ul>
+          <li><strong>Conversión de catálogos físicos</strong> a formato web interactivo</li>
+          <li><span class="highlight-orange">Navegación intuitiva</span> por categorías y productos</li>
+          <li><strong>Buscador de productos</strong> para rápida localización</li>
+          <li><span class="highlight">Botón de WhatsApp</span> integrado para consultas y pedidos</li>
+          <li><strong>Diseño responsive</strong> optimizado para móviles y tablets</li>
+        </ul>
+        <div class="service-box"><h4>📱 Dato clave</h4><p>El <span class="highlight-orange">78% de los usuarios</span> prefiere consultar catálogos digitales antes que impresos.</p></div>
+        <div class="service-quote"><p>"Un catálogo web es tu mejor vendedor, disponible 24/7."</p><span class="quote-author">Jorge Luis, Diseñador Gráfico</span></div>
+        <div class="service-divider"></div>
+        <div class="service-conclusion"><h3>🎯 ¿Listo para digitalizar tu catálogo?</h3><p>Un <strong>catálogo web profesional</strong> es la <span class="highlight">herramienta perfecta</span> para <strong>ampliar tu alcance</strong> y <strong>agilizar el proceso de ventas</strong>.</p></div>
+      `,
+      relatedProjects: ['p2', 'p6']
+    }];
 
-bindNav("desktop-nav");
-bindNav("mobile-nav");
-setupSkillSum();
-renderProject("p1");
-</script>
+    const blogPosts = [{
+      id: 'b1',
+      title: 'Cómo diseñar catálogos técnicos que vendan',
+      excerpt: 'Descubre las claves para crear catálogos técnicos que no solo informen, sino que conviertan a tus clientes potenciales en compradores.',
+      category: 'Diseño',
+      date: '15 de agosto, 2026',
+      readTime: '5 min',
+      image: 'https://picsum.photos/seed/catalogos/800/500',
+      content: `
+        <p class="intro">Un <strong>catálogo técnico</strong> bien diseñado es mucho más que una lista de productos. Es una <span class="highlight">herramienta de ventas</span> que puede marcar la diferencia entre un cliente que compra y uno que busca en otro lado.</p>
+
+        <p>En mi experiencia diseñando catálogos para industrias como la <strong>eléctrica</strong>, la <strong>construcción</strong> y el <strong>retail</strong>, he identificado <span class="highlight">5 claves</span> que todo catálogo técnico debe tener para ser efectivo:</p>
+
+        <h2>1. Jerarquía visual clara</h2>
+        <p>El ojo humano escanea la información en patrones específicos. Utiliza <strong>tamaños de fuente</strong>, <strong>colores</strong> y <strong>espaciado</strong> para guiar la mirada del lector hacia lo más importante primero.</p>
+
+        <div class="blog-box">
+          <h4>💡 Consejo profesional</h4>
+          <p>Un buen diseño de catálogo puede <span class="highlight-orange">reducir el tiempo de búsqueda de productos hasta en un 40%</span>, mejorando significativamente la experiencia del usuario.</p>
+        </div>
+
+        <h2>2. Iconografía consistente</h2>
+        <p>Los <strong>iconos</strong> ayudan a comunicar especificaciones técnicas de forma rápida. Crea un <span class="highlight">sistema de iconos</span> que sea coherente en todo el catálogo.</p>
+
+        <div class="blog-quote">
+          <p>"Un catálogo bien diseñado reduce el tiempo de respuesta comercial hasta en un 30%."</p>
+          <span class="quote-author">Jorge Luis, Diseñador Gráfico</span>
+        </div>
+
+        <h2>3. Fichas técnicas estandarizadas</h2>
+        <p>Cada producto debe tener su ficha con la <strong>misma estructura</strong>. Esto facilita la comparación y la toma de decisiones.</p>
+
+        <ul>
+          <li><strong>Estructura modular</strong> para organizar grandes volúmenes de productos</li>
+          <li><span class="highlight-orange">Sistema de codificación visual</span> por categorías y familias</li>
+          <li><strong>Diseño optimizado</strong> para impresión y formato digital</li>
+        </ul>
+
+        <div class="blog-divider"></div>
+
+        <div class="blog-conclusion">
+          <h3>🎯 Conclusión</h3>
+          <p>Diseñar un <strong>catálogo técnico profesional</strong> no es solo cuestión de estética. Es una <span class="highlight">estrategia comercial</span> que, bien ejecutada, puede <strong>aumentar tus ventas</strong> y <strong>posicionar tu marca</strong> como referente en el sector.</p>
+        </div>
+      `
+    }, {
+      id: 'b2',
+      title: 'Branding: la clave para destacar en un mercado saturado',
+      excerpt: 'El branding no es solo un logo bonito. Es la estrategia que diferencia tu marca y crea conexiones emocionales con tus clientes.',
+      category: 'Branding',
+      date: '8 de agosto, 2026',
+      readTime: '4 min',
+      image: 'https://picsum.photos/seed/branding/800/500',
+      content: `
+        <p class="intro">En un mundo donde los consumidores ven miles de anuncios al día, tener un <strong>branding sólido</strong> es más importante que nunca. Pero, ¿qué significa realmente hacer branding?</p>
+
+        <p>El <span class="highlight">branding</span> es la suma de todas las experiencias que una persona tiene con tu marca. Desde el <strong>logo</strong> y los <strong>colores</strong> hasta la forma en que respondes un correo electrónico.</p>
+
+        <h2>Los 3 pilares del branding efectivo</h2>
+
+        <h3>1. Propósito</h3>
+        <p>¿Por qué existe tu marca más allá de ganar dinero? Un <strong>propósito claro</strong> conecta con los <span class="highlight">valores de tus clientes</span> y genera lealtad.</p>
+
+        <div class="blog-quote">
+          <p>"Las personas no compran lo que haces, compran por qué lo haces."</p>
+          <span class="quote-author">Simon Sinek</span>
+        </div>
+
+        <h3>2. Consistencia</h3>
+        <p>Tu marca debe ser <strong>reconocible</strong> en todos los puntos de contacto: web, redes, empaques, atención al cliente. La <span class="highlight">consistencia genera confianza</span>.</p>
+
+        <ul>
+          <li><strong>Identidad visual</strong> coherente en todos los canales</li>
+          <li><span class="highlight-orange">Tono de voz</span> consistente en todas las comunicaciones</li>
+          <li><strong>Experiencia de usuario</strong> uniforme</li>
+        </ul>
+
+        <div class="blog-divider"></div>
+
+        <div class="blog-conclusion">
+          <h3>🎯 Conclusión</h3>
+          <p>Invertir en <strong>branding</strong> no es un gasto, es una <span class="highlight">inversión a largo plazo</span> que genera <strong>valor</strong> y <strong>fidelidad</strong>. ¿Listo para construir una marca que destaque?</p>
+        </div>
+      `
+    }, {
+      id: 'b3',
+      title: 'Tendencias de diseño gráfico para 2026',
+      excerpt: 'Explora las tendencias que están marcando el rumbo del diseño gráfico este año. Desde el diseño inclusivo hasta la inteligencia artificial.',
+      category: 'Tendencias',
+      date: '1 de agosto, 2026',
+      readTime: '6 min',
+      image: 'https://picsum.photos/seed/tendencias/800/500',
+      content: `
+        <p class="intro">El <strong>diseño gráfico</strong> evoluciona constantemente. Lo que funcionaba hace 5 años, hoy puede parecer obsoleto. Estas son las <span class="highlight">tendencias</span> que están definiendo el <strong>2026</strong>.</p>
+
+        <h2>1. Diseño inclusivo y accesible</h2>
+        <p>Crear diseños que sean <strong>utilizables</strong> por personas con diferentes capacidades ya no es opcional. Esto incluye <span class="highlight">contraste de colores</span>, tamaños de fuente legibles y navegación intuitiva.</p>
+
+        <div class="blog-box">
+          <h4>♿ Accesibilidad</h4>
+          <p>El <span class="highlight-orange">diseño inclusivo</span> no solo es ético, también amplía tu <strong>audiencia potencial</strong> y mejora la experiencia de todos los usuarios.</p>
+        </div>
+
+        <h2>2. Tipografías personalizadas</h2>
+        <p>Las marcas están creando sus <strong>propias tipografías</strong> para diferenciarse. Una tipografía única puede ser tan <span class="highlight">reconocible</span> como un logo.</p>
+
+        <h2>3. IA como herramienta creativa</h2>
+        <p>La <strong>inteligencia artificial</strong> está transformando el diseño, pero no reemplazando a los diseñadores. Al contrario, nos permite ser más <span class="highlight">eficientes</span> y explorar ideas más rápido.</p>
+
+        <div class="blog-quote">
+          <p>"El futuro del diseño no es humano vs IA, es humano + IA."</p>
+          <span class="quote-author">Tendencia 2026</span>
+        </div>
+
+        <div class="blog-divider"></div>
+
+        <div class="blog-conclusion">
+          <h3>🎯 Conclusión</h3>
+          <p>El <strong>diseño gráfico</strong> en 2026 se caracteriza por ser <span class="highlight">inclusivo, inteligente y sostenible</span>. Si quieres estar a la vanguardia, <strong>contáctame</strong> y te ayudo a implementar estas tendencias en tu marca.</p>
+        </div>
+      `
+    }, {
+      id: 'b4',
+      title: 'Diseño Web: claves para un sitio que vende',
+      excerpt: 'Descubre los elementos esenciales que todo sitio web debe tener para convertir visitantes en clientes y aumentar tus ventas.',
+      category: 'Web',
+      date: '10 de agosto, 2026',
+      readTime: '5 min',
+      image: 'https://picsum.photos/seed/web/800/500',
+      content: `
+        <p class="intro">Un <strong>sitio web</strong> no es solo una carta de presentación digital. Es tu <span class="highlight">mejor vendedor</span>, disponible 24/7, 365 días al año.</p>
+
+        <p>Para que un sitio web realmente <strong>venda</strong>, debe combinar <span class="highlight">diseño atractivo</span>, <strong>experiencia de usuario fluida</strong> y <strong>elementos de conversión</strong> estratégicamente ubicados.</p>
+
+        <h2>Elementos clave de un sitio web que vende</h2>
+
+        <h3>1. Velocidad de carga</h3>
+        <p>El <strong>tiempo de carga</strong> es el factor más importante para la retención de usuarios. Un sitio lento <span class="highlight">pierde clientes</span> antes de que puedan ver tu oferta.</p>
+
+        <div class="blog-box">
+          <h4>⚡ Dato clave</h4>
+          <p>El <span class="highlight-orange">40% de los usuarios</span> abandonan un sitio si tarda más de <strong>3 segundos</strong> en cargar.</p>
+        </div>
+
+        <h3>2. Llamadas a la acción claras</h3>
+        <p>Cada página debe tener un <strong>objetivo claro</strong>. Utiliza botones de <span class="highlight">llamada a la acción</span> (CTA) visibles y persuasivos.</p>
+
+        <h3>3. Diseño responsive</h3>
+        <p>Más del <strong>60% del tráfico web</strong> proviene de dispositivos móviles. Tu sitio debe <span class="highlight">verse y funcionar perfectamente</span> en todos los tamaños de pantalla.</p>
+
+        <ul>
+          <li><strong>Diseño adaptable</strong> a todos los dispositivos</li>
+          <li><span class="highlight-orange">Navegación táctil</span> optimizada para móviles</li>
+          <li><strong>Contenido legible</strong> sin necesidad de hacer zoom</li>
+        </ul>
+
+        <div class="blog-divider"></div>
+
+        <div class="blog-conclusion">
+          <h3>🎯 Conclusión</h3>
+          <p>Un <strong>sitio web profesional</strong> es una <span class="highlight">inversión estratégica</span> que puede <strong>multiplicar tus ventas</strong> y <strong>posicionar tu marca</strong> en el mercado digital.</p>
+        </div>
+      `
+    }];
+
+    // ============================================================
+    // NAVIGATION
+    // ============================================================
+
+    const pages = {
+      home: document.getElementById('page-home'),
+      about: document.getElementById('page-about'),
+      services: document.getElementById('page-services'),
+      portfolio: document.getElementById('page-portfolio'),
+      blog: document.getElementById('page-blog'),
+      contact: document.getElementById('page-contact')
+    };
+
+    const allNavButtons = document.querySelectorAll('[data-page]');
+
+    function showPage(id) {
+      Object.values(pages).forEach(p => p.classList.remove('active'));
+      if (pages[id]) pages[id].classList.add('active');
+
+      if (id === 'portfolio') {
+        document.getElementById('portfolio-list').style.display = 'block';
+        document.getElementById('project-detail').classList.remove('visible');
+      }
+
+      if (id === 'blog') {
+        document.getElementById('blog-list').style.display = 'block';
+        document.getElementById('blog-detail').style.display = 'none';
+      }
+
+      if (id === 'services') {
+        document.getElementById('services-grid').style.display = 'grid';
+        document.getElementById('service-detail').style.display = 'none';
+      }
+
+      allNavButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.page === id));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // RENDER FUNCTIONS
+    // ============================================================
+
+    function renderFeaturedProjects() {
+      const grid = document.getElementById('featured-grid');
+      grid.innerHTML = projectsData.slice(0, 3).map(p => `
+        <div class="featured-item" onclick="showProject('${p.id}')">
+          <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+          <div class="overlay"><span>${p.category}</span><h4>${p.title}</h4></div>
+        </div>
+      `).join('');
+    }
+
+    function renderPortfolio() {
+      const grid = document.getElementById('portfolio-grid');
+      grid.innerHTML = projectsData.map(p => `
+        <div class="portfolio-card" onclick="showProject('${p.id}')">
+          <div class="card-image">
+            <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+            <span class="card-tag">${p.category}</span>
+          </div>
+          <div class="card-body">
+            <span class="card-category">${p.category}</span>
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+            <span class="btn-ver">Ver detalle →</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderServices() {
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = servicesData.map(s => `
+        <div class="service-card" onclick="showService('${s.id}')">
+          <div class="service-image">
+            <img src="${s.image}" alt="${s.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+            <span class="service-icon">${s.icon}</span>
+          </div>
+          <div class="service-body">
+            <span class="service-tag">${s.tag}</span>
+            <h3>${s.title}</h3>
+            <p>${s.description}</p>
+            <span class="service-btn">Conocer más →</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function showService(id) {
+      const service = servicesData.find(s => s.id === id);
+      if (!service) return;
+
+      document.getElementById('services-grid').style.display = 'none';
+      const detailEl = document.getElementById('service-detail');
+      detailEl.style.display = 'block';
+
+      const relatedProjects = service.relatedProjects.map(id => projectsData.find(p => p.id === id)).filter(Boolean);
+
+      const container = document.getElementById('service-content');
+      container.innerHTML = `
+        <div class="service-detail-header">
+          <span class="service-category">${service.tag}</span>
+          <h1>${service.title}</h1>
+          <p class="service-subtitle">${service.description}</p>
+        </div>
+        <img class="service-detail-image" src="${service.image}" alt="${service.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        <div class="service-article">
+          ${service.fullDescription}
+        </div>
+        ${relatedProjects.length > 0 ? `
+          <div class="service-related">
+            <h3>📁 Proyectos relacionados</h3>
+            <div class="service-related-grid">
+              ${relatedProjects.map(p => `
+                <div class="service-related-item" onclick="showProject('${p.id}')">
+                  <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+                  <div class="related-overlay">
+                    <span>${p.category}</span>
+                    <h4>${p.title}</h4>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+        <div style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border-line);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+          <p style="color:#bcbcbc;">¿Necesitas este servicio?</p>
+          <button class="btn btn-main" onclick="showPage('contact')">📩 Solicitar cotización</button>
+        </div>
+      `;
+
+      allNavButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.page === 'services'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function backToServices() {
+      document.getElementById('services-grid').style.display = 'grid';
+      document.getElementById('service-detail').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // BLOG - CON CATEGORÍAS DINÁMICAS
+    // ============================================================
+
+    let currentCategoryFilter = 'all';
+
+    function renderBlog(posts = blogPosts) {
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = posts.map(post => `
+        <div class="blog-post" onclick="showBlogPost('${post.id}')">
+          <div class="blog-image">
+            <img src="${post.image}" alt="${post.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+            <span class="blog-category-tag">${post.category}</span>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-meta"><span>📅 ${post.date}</span><span>⏱️ ${post.readTime}</span></div>
+            <h3>${post.title}</h3>
+            <p class="blog-excerpt">${post.excerpt}</p>
+            <span class="blog-read-more">Leer más →</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterBlog(category) {
+      currentCategoryFilter = category;
+      document.querySelectorAll('.blog-filters button').forEach(btn => {
+        btn.classList.toggle('active-filter', btn.dataset.filter === category || (category === 'all' && btn.dataset.filter === 'all'));
+      });
+      const filtered = category === 'all' ? blogPosts : blogPosts.filter(p => p.category === category);
+      renderBlog(filtered);
+      document.getElementById('blog-list').style.display = 'block';
+      document.getElementById('blog-detail').style.display = 'none';
+    }
+
+    function showBlogPost(id) {
+      const post = blogPosts.find(p => p.id === id);
+      if (!post) return;
+
+      document.getElementById('blog-list').style.display = 'none';
+      const detailEl = document.getElementById('blog-detail');
+      detailEl.style.display = 'block';
+
+      const container = document.getElementById('blog-content');
+      container.innerHTML = `
+        <div class="blog-detail-header">
+          <span class="blog-category">${post.category}</span>
+          <h1>${post.title}</h1>
+          <div class="blog-meta"><span>📅 ${post.date}</span><span>⏱️ ${post.readTime}</span></div>
+        </div>
+        <img class="blog-detail-image" src="${post.image}" alt="${post.title}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+        <div class="blog-article">${post.content}</div>
+        <div style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border-line);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+          <p style="color:#bcbcbc;">¿Te gustó este artículo?</p>
+          <button class="btn btn-main" onclick="showPage('contact')">📩 Contáctame</button>
+        </div>
+      `;
+
+      allNavButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.page === 'blog'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function backToBlog() {
+      document.getElementById('blog-list').style.display = 'block';
+      document.getElementById('blog-detail').style.display = 'none';
+      filterBlog(currentCategoryFilter);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // PROJECT DETAIL
+    // ============================================================
+
+    let currentProjectId = null;
+    let currentImageIndex = 0;
+
+    function showProject(id) {
+      const project = projectsData.find(p => p.id === id);
+      if (!project) return;
+
+      currentProjectId = id;
+      currentImageIndex = 0;
+
+      const portfolioPage = document.getElementById('page-portfolio');
+      if (!portfolioPage.classList.contains('active')) showPage('portfolio');
+
+      document.getElementById('portfolio-list').style.display = 'none';
+      const detailEl = document.getElementById('project-detail');
+      detailEl.classList.add('visible');
+
+      const container = document.getElementById('project-content');
+      container.innerHTML = `
+        <div class="gallery-wrapper">
+          <div class="gallery-container" id="gallery-container">
+            ${project.gallery.map((img, idx) => `
+              <div class="gallery-slide ${idx === 0 ? 'active' : ''}" data-index="${idx}">
+                <img src="${img}" alt="${project.title} - Imagen ${idx + 1}" loading="lazy" decoding="async" onerror="this.parentElement.style.display='none'" />
+              </div>
+            `).join('')}
+            <button class="gallery-btn prev" onclick="changeImage(-1)">‹</button>
+            <button class="gallery-btn next" onclick="changeImage(1)">›</button>
+            <div class="gallery-counter">${currentImageIndex + 1} / ${project.gallery.length}</div>
+          </div>
+          <div class="gallery-thumbs" id="gallery-thumbs">
+            ${project.gallery.map((img, idx) => `
+              <div class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="goToImage(${idx})">
+                <img src="${img}" alt="Miniatura ${idx + 1}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <div class="detail-info">
+          <div class="chip" style="margin-bottom:10px;">${project.category}</div>
+          <h1 style="font-size:2rem;">${project.title}</h1>
+          <div class="detail-meta"><span>📅 2024</span><span>🏷️ ${project.category}</span></div>
+          <p class="detail-desc">${project.description}</p>
+          <h3>Resultados clave</h3>
+          <ul>${project.results.map(r => `<li>${r}</li>`).join('')}</ul>
+          <button class="btn btn-main" style="margin-top:24px;" onclick="showPage('contact')">📩 Solicitar proyecto similar</button>
+        </div>
+      `;
+
+      allNavButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.page === 'portfolio'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function changeImage(direction) {
+      const project = projectsData.find(p => p.id === currentProjectId);
+      if (!project) return;
+      const slides = document.querySelectorAll('.gallery-slide');
+      const thumbs = document.querySelectorAll('.gallery-thumb');
+      const total = project.gallery.length;
+      currentImageIndex = (currentImageIndex + direction + total) % total;
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === currentImageIndex));
+      thumbs.forEach((thumb, idx) => thumb.classList.toggle('active', idx === currentImageIndex));
+      const counter = document.querySelector('.gallery-counter');
+      if (counter) counter.textContent = `${currentImageIndex + 1} / ${total}`;
+    }
+
+    function goToImage(index) {
+      const project = projectsData.find(p => p.id === currentProjectId);
+      if (!project) return;
+      const slides = document.querySelectorAll('.gallery-slide');
+      const thumbs = document.querySelectorAll('.gallery-thumb');
+      const total = project.gallery.length;
+      currentImageIndex = Math.min(Math.max(index, 0), total - 1);
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === currentImageIndex));
+      thumbs.forEach((thumb, idx) => thumb.classList.toggle('active', idx === currentImageIndex));
+      const counter = document.querySelector('.gallery-counter');
+      if (counter) counter.textContent = `${currentImageIndex + 1} / ${total}`;
+    }
+
+    function backToPortfolio() {
+      document.getElementById('portfolio-list').style.display = 'block';
+      document.getElementById('project-detail').classList.remove('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // SKILLS ANIMATION
+    // ============================================================
+
+    const skillCards = document.querySelectorAll('.skill-about');
+
+    skillCards.forEach(card => {
+      const targetValue = parseInt(card.dataset.value);
+      const fillBar = card.querySelector('.skill-fill');
+      const pctText = card.querySelector('.skill-pct');
+
+      card.addEventListener('mouseenter', () => {
+        fillBar.style.width = targetValue + '%';
+        let current = 0;
+        const step = Math.ceil(targetValue / 40);
+        const interval = setInterval(() => {
+          current += step;
+          if (current >= targetValue) { current = targetValue;
+            clearInterval(interval); }
+          pctText.textContent = current + '%';
+        }, 25);
+      });
+    });
+
+    const skillsSection = document.querySelector('.skills-section');
+    let skillsAnimated = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !skillsAnimated) {
+          skillsAnimated = true;
+          skillCards.forEach((card, index) => {
+            setTimeout(() => {
+              const event = new MouseEvent('mouseenter');
+              card.dispatchEvent(event);
+            }, index * 150);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    if (skillsSection) observer.observe(skillsSection);
+
+    // ============================================================
+    // KEYBOARD NAVIGATION
+    // ============================================================
+
+    document.addEventListener('keydown', (e) => {
+      if (document.getElementById('project-detail').classList.contains('visible')) {
+        if (e.key === 'ArrowLeft') changeImage(-1);
+        if (e.key === 'ArrowRight') changeImage(1);
+      }
+    });
+
+    // ============================================================
+    // CONTACT FORM
+    // ============================================================
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const company = document.getElementById('company').value.trim() || 'No especificada';
+      const budget = document.getElementById('budget').value;
+      const message = document.getElementById('message').value.trim();
+      const services = [...document.querySelectorAll("input[name='service']:checked")].map(s => s.value);
+
+      if (!services.length) { alert('Selecciona al menos un servicio.'); return; }
+
+      const text = [
+        'Hola Jorge Luis, quiero una propuesta profesional.',
+        `Nombre: ${name}`, `Correo: ${email}`, `Empresa: ${company}`,
+        `Servicios requeridos: ${services.join(', ')}`,
+        `Inversión estimada: ${budget}`,
+        `Objetivo: ${message}`
+      ].join('\n');
+
+      window.open(`https://wa.me/59175179990?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
+
+    // ============================================================
+    // NAV BINDINGS
+    // ============================================================
+
+    document.querySelectorAll('[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => showPage(btn.dataset.page));
+    });
+
+    document.querySelectorAll('.blog-filters button').forEach(btn => {
+      btn.addEventListener('click', () => filterBlog(btn.dataset.filter));
+    });
+
+    // ============================================================
+    // INIT
+    // ============================================================
+
+    renderFeaturedProjects();
+    renderPortfolio();
+    renderServices();
+    renderBlog(blogPosts);
+    showPage('home');
+  </script>
+
 </body>
 </html>
